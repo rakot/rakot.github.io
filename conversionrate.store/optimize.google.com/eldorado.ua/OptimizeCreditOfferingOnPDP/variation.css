@@ -1,0 +1,49 @@
+body.hide-modal-for-experiment .rodal {display: none;}
+.credit-offer-experiment-activated .product-credit-offers {display: flex; border-bottom: 3px solid #eee; padding-bottom: 20px;}
+.credit-offer-experiment-activated .product-credit-offers-container {padding: 20px 10px 10px;}
+.credit-offer-experiment-activated .product-credit-offers-title {color: #989a9b; font-size: 16px; margin-bottom: 10px;}
+.credit-offer-experiment-activated .product-credit-offers .product-credit-offers-list {width: 100%;}
+.credit-offer-experiment-activated .product-credit-offers .product-credit-offers-buttons {width: 240px;}
+
+.credit-offer-experiment-activated .product-credit-offers .get-details {width: 220px;height: 44px;text-align: center;border: 2px solid #fd0028;cursor: pointer;position: relative;display: -ms-flexbox;display: flex;-ms-flex-pack: center;justify-content: center;-ms-flex-align: center;align-items: center;font-weight: 500;background-color: #fff;box-sizing: border-box;overflow: hidden;z-index: 1;transition: color 1s ease;color: #474a4b; margin-top: 20px;}
+.credit-offer-experiment-activated .product-credit-offers .product-credit-offers-bank-list {display: flex; margin-top: 15px;}
+.credit-offer-experiment-activated .product-credit-offers .product-credit-offers-bank-list .bank-logo {font-size: 30px; line-height: 1; margin-right: 30px; cursor: pointer;}
+.credit-offer-experiment-activated .product-credit-offers .product-credit-offers-bank-list .bank-logo .popup {display: none; position: absolute; font-size: 15px; line-height: 18px; background: #EB5B6D; color: #fff; font-width: 400; padding: 10px 15px; margin-top: 12px; margin-left: -20px;}
+.credit-offer-experiment-activated .product-credit-offers .product-credit-offers-bank-list .bank-logo .popup:before {content: ''; position: absolute; width: 0; height: 0; border-style: solid; border-width: 0 10px 10px 10px; border-color: transparent transparent #EB5B6D transparent; margin-top: -20px; margin-left: 10px;}
+.credit-offer-experiment-activated .product-credit-offers .product-credit-offers-bank-list .bank-logo:hover .popup {display: block; z-index: 10000;}
+.credit-offer-experiment-activated .product-credit-offers .product-credit-offers-first {font-size: 18px;}
+.credit-offer-experiment-activated .product-credit-offers .product-credit-offers-first > div {display: inline-block; margin-right: 5px;}
+.credit-offer-experiment-activated .product-credit-offers .product-credit-offers-first .from-caption {text-transform: capitalize;}
+.credit-offer-experiment-activated .product-credit-offers .product-credit-offers-first .value {font-size: 26px; font-weight: bold;}
+.credit-offer-experiment-activated .product-credit-offers .product-credit-offers-first .currency {font-size: 26px; font-weight: bold;}
+
+
+.credit-offer-experiment-activated .right-part.credit-information {display: none;}
+.credit-offer-experiment-activated .left-part.price-information {width: 100%;}
+.credit-offer-experiment-activated .price-information .buy-button-placeholder {place-content: flex-end;}
+
+.credit-offer-experiment-activated .product-buy-container div.left-part {margin-right: 5px;}
+.credit-offer-experiment-activated .product-buy-container .left-part div.content-information {height: auto;}
+.credit-offer-experiment-activated .product-buy-container .left-part .content-information .content-row div.old-price-value {font-size: 18px; padding-bottom: 10px; background-image: linear-gradient(to right, black 33%, rgba(255,255,255,0.8) 0%); background-position: bottom; background-size: 5px 1px; background-repeat: repeat-x;}
+.credit-offer-experiment-activated .product-buy-container .left-part .content-information .content-row div.price-value {font-size: 36px; padding-right: 100px;}
+.credit-offer-experiment-activated .product-buy-container .left-part .content-information .content-row div.price-difference {display: block; position: absolute; top: 0; right: 0; padding: 0; border: 0; background: transparent;}
+.credit-offer-experiment-activated .product-buy-container .left-part .content-information .content-row div.price-difference .title {text-transform: capitalize; display: inline;}
+.credit-offer-experiment-activated .product-buy-container .left-part .content-information .content-row div.price-difference .value {display: inline;}
+.credit-offer-experiment-activated .product-buy-container .left-part > .button {position: absolute; right: 0; bottom: 0;}
+
+
+.credit-offer-experiment-activated .product-delivery-information-container div.delivery-information {display: flex;}
+.credit-offer-experiment-activated .product-delivery-information-container .delivery-information div.delivery-item {width: 28%; margin-right: 5%;}
+.credit-offer-experiment-activated .product-delivery-information-container .delivery-information .delivery-item div.delivery-header {display: block;}
+.credit-offer-experiment-activated .product-delivery-information-container .delivery-information .delivery-item div.content {padding-left: 0;}
+
+.credit-offer-experiment-activated .product-delivery-information-container .delivery-information .delivery-item .content a {color: #fd0028; text-decoration: underline; }
+.credit-offer-experiment-activated .product-delivery-information-container .delivery-information div.delivery-item {width: 100%;}
+.credit-offer-experiment-activated .product-delivery-information-container .delivery-information .delivery-item .content a .buy-product {margin-top: 10px;}
+
+@media (max-width: 1279px) {
+    .credit-offer-experiment-activated .product-credit-offers {flex-direction: column;}
+    .credit-offer-experiment-activated .product-credit-offers .product-credit-offers-buttons {margin-top: 15px; width: 100%;}
+    .credit-offer-experiment-activated .product-credit-offers .product-credit-offers-buttons .buy-button-placeholder .buy-button {width: 100%;}
+    .credit-offer-experiment-activated .product-credit-offers .get-details {width: 100%;}
+}
