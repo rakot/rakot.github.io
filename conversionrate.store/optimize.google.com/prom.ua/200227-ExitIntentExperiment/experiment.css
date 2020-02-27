@@ -1,0 +1,29 @@
+.exit-intent-experiment-waiting-for-basket #shopping_cart_list_overlay {display: none;}
+
+.exit-intent-experiment-basket-fake-style #shopping_cart_list_overlay h4 {display: none;}
+.exit-intent-experiment-alert-box {color: #F44A4A; text-align: center; font-weight: 600; font-size: 26px; line-height: normal; margin: 30px 25px;}
+
+.exit-intent-experiment-basket-fake-style .x-shc-item__control-cell {display: none;}
+.exit-intent-experiment-basket-fake-style .x-shc-item__modifications {display: none;}
+.exit-intent-experiment-basket-fake-style .x-shc-total .x-shc-total__info-wrapper {display: none;}
+.exit-intent-experiment-basket-fake-style .x-shc-total .x-shc-total__epayment-holder {display: none;}
+.exit-intent-experiment-basket-fake-style .x-shc-total__continue-control-holder {display: none;}
+.exit-intent-experiment-basket-fake-style .x-shc-total__controls-wrapper {width: 100%; display: flex;}
+.exit-intent-experiment-basket-fake-style .x-shc-total__main-control-holder {order: 2; width: 250px;}
+.exit-intent-experiment-basket-fake-style .x-shc-item__cell-label {font-weight: bold;}
+.exit-intent-experiment-basket-fake-style .x-shc-item__summary-cell {width: 100px;}
+.exit-intent-experiment-basket-fake-style .companyRate__wrapp--2vAUk {display: none;}
+.exit-intent-experiment-basket-fake-style .x-cart-overlay .x-shc-group {border-top: none;}
+
+.exit-intent-experiment-basket-fake-style .x-shc-company__logo {max-height: 20px; max-width: 20px;}
+.exit-intent-experiment-basket-fake-style .x-shc-company__title {font-size: 13px; font-weight: normal; line-height: 20px;}
+.exit-intent-experiment-basket-fake-style .x-shc-total {border-top: none;}
+
+.exit-intent-experiment-order-alert {display: inline-block; margin-right: 35px; color: #F44A4A; border:  1px solid #F44A4A; border-radius: 2px; width: auto; flex-grow: 1; background: #FEEDED; padding: 0 15px; line-height: 48px;}
+
+
+
+
+.exit-intent-experiment-basket-fake-style  .x-quantity__holder {border: 0; padding: 0; text-align: left;}
+.exit-intent-experiment-basket-fake-style  .x-quantity__holder .x-quantity__button {display: none;}
+.exit-intent-experiment-basket-fake-style  .x-quantity__holder .x-quantity__input {pointer-events: none; font-size: 13px; font-weight: 600; text-align: left;}
