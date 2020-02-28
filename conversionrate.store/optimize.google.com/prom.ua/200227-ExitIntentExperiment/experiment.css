@@ -18,6 +18,8 @@
 .exit-intent-experiment-basket-fake-style .x-shc-company__logo {max-height: 20px; max-width: 20px;}
 .exit-intent-experiment-basket-fake-style .x-shc-company__title {font-size: 13px; font-weight: normal; line-height: 20px;}
 .exit-intent-experiment-basket-fake-style .x-shc-total {border-top: none;}
+.exit-intent-experiment-basket-fake-style .x-shc-item__image-cell {width: 150px;}
+.exit-intent-experiment-basket-fake-style .x-shc-item__image-cell .x-shc-item__image {max-width: 150px; max-height: 150px;}
 
 .exit-intent-experiment-order-alert {display: inline-block; margin-right: 35px; color: #F44A4A; border:  1px solid #F44A4A; border-radius: 2px; width: auto; flex-grow: 1; background: #FEEDED; padding: 0 15px; line-height: 48px;}
 

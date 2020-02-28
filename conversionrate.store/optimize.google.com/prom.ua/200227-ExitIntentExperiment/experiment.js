@@ -2,21 +2,79 @@ $(function () {
     (function(a){function d(e){0<e.clientY||(b&&clearTimeout(b),0>=a.exitIntent.settings.sensitivity?a.event.trigger("exitintent"):b=setTimeout(function(){b=null;a.event.trigger("exitintent")},a.exitIntent.settings.sensitivity))}function c(){b&&(clearTimeout(b),b=null)}var b;a.exitIntent=function(b,f){a.exitIntent.settings=a.extend(a.exitIntent.settings,f);if("enable"==b)a(window).mouseleave(d),a(window).mouseenter(c);else if("disable"==b)c(),a(window).unbind("mouseleave",d),a(window).unbind("mouseenter",
         c);else throw"Invalid parameter to jQuery.exitIntent -- should be 'enable'/'disable'";};a.exitIntent.settings={sensitivity:300}})(jQuery);
 
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+        'event': 'autoEvent',
+        'eventCategory': 'Exp - Exit-Intent Popup',
+        'eventAction': 'Exp activated'
+    });
+
+    var initialCartIds = 0;
+    try {
+        initialCartIds = AppState.config.CS.SHOPPING_CART.cart_product_ids.length;
+    } catch (e) {
+
+    }
     $.exitIntent('enable');
     $(document).bind('exitintent',
         function() {
             var backet_counter = $('.js-shopping-cart-button-container .x-header__controls-counter');
             var items = parseInt(backet_counter.text());
-            if(items && $('#shopping_cart_list_overlay').length === 0) {
+            var isAlreadyShown = !sessionStorage.getItem('isIntentAlreadyShown');
+            if(items && isAlreadyShown && initialCartIds === items && $('#shopping_cart_list_overlay').length === 0) {
                 $('body').addClass('exit-intent-experiment-waiting-for-basket exit-intent-experiment-basket-fake-style');
+                sessionStorage.setItem('isIntentAlreadyShown', 'yes');
                 backet_counter.click();
                 $.exitIntent('disable');
+                if(window.hj) {
+                    hj('trigger', 'exit-intent-popup');
+                }
+                window.dataLayer = window.dataLayer || [];
+                dataLayer.push({
+                    'event': 'autoEvent',
+                    'eventCategory': 'Exp - Exit-Intent Popup',
+                    'eventAction': 'Popup loaded'
+                });
                 var pollForBacket = function () {
                     if($('#shopping_cart_list_overlay').length) {
+                        $('#shopping_cart_list_overlay .x-shc-item__image').each(function () {
+                            var self = $(this);
+                            self.attr('src',self.attr('src').replace('_w100_h100_','_w150_h150_'));
+                        });
+
                         $('#shopping_cart_list_overlay h4').after('<div class="exit-intent-experiment-alert-box">На складе заканчиваются товары из вашей корзины!</div>');
 
                         $('#shopping_cart_list_overlay .x-shc-total__controls-wrapper').append('<div class="exit-intent-experiment-order-alert">Успейте оформить заказ!</div>');
-                        $('#shopping_cart_list_overlay .x-shc-total__main-control-holder .x-button__text').text('Завершить заказ');
+                        $('#shopping_cart_list_overlay .x-shc-total__main-control-holder .x-button__text').text('Завершить заказ').click(function () {
+                            window.dataLayer = window.dataLayer || [];
+                            dataLayer.push({
+                                'event': 'autoEvent',
+                                'eventCategory': 'Exp - Exit-Intent Popup',
+                                'eventAction': 'click',
+                                'eventLabel': 'Complete order'
+                            });
+                        });
+                        $('#shopping_cart_list_overlay').click(function (event) {
+                            if($(event.target).closest('.x-overlay__dialog.x-cart-overlay').length === 0) {
+                                window.dataLayer = window.dataLayer || [];
+                                dataLayer.push({
+                                    'event': 'autoEvent',
+                                    'eventCategory': 'Exp - Exit-Intent Popup',
+                                    'eventAction': 'click',
+                                    'eventLabel': 'Background to close'
+                                });
+                            }
+                        });
+                        $('#shopping_cart_list_overlay .x-overlay__close-button').click(function () {
+                            window.dataLayer = window.dataLayer || [];
+                            dataLayer.push({
+                                'event': 'autoEvent',
+                                'eventCategory': 'Exp - Exit-Intent Popup',
+                                'eventAction': 'click',
+                                'eventLabel': 'X to close'
+                            });
+                        });
+
                         $('#shopping_cart_list_overlay .x-shc-company').each(function () {
                             var shop = $(this);
                             shop.parent().find('.x-shc-item').each(function () {
