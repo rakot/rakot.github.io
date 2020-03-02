@@ -23,7 +23,7 @@ $(function () {
             var isAlreadyShown = !sessionStorage.getItem('isIntentAlreadyShown');
             if(items && isAlreadyShown && initialCartIds === items && $('#shopping_cart_list_overlay').length === 0) {
                 $('body').addClass('exit-intent-experiment-waiting-for-basket exit-intent-experiment-basket-fake-style');
-                sessionStorage.setItem('isIntentAlreadyShown', 'yes');
+                // sessionStorage.setItem('isIntentAlreadyShown', 'yes');
                 backet_counter.click();
                 $.exitIntent('disable');
                 if(window.hj) {
@@ -80,6 +80,13 @@ $(function () {
                             shop.parent().find('.x-shc-item').each(function () {
                                 var item = $(this);
                                 item.find('.x-shc-item__info-cell').prepend(shop.clone());
+                                var product_name = item.find('.x-shc-item__title-link');
+                                product_name.before($('<span style="font-weight: bold;">').text(product_name.text()));
+                                product_name.remove();
+                                var img = item.find('.x-shc-item__image');
+                                var href = img.parent();
+                                img.parent().after(img);
+                                href.remove();
                             });
                             shop.remove();
                         });
