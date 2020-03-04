@@ -9,6 +9,13 @@ $(function () {
         'eventAction': 'Exp activated'
     });
 
+    var getCookie = function(name) {
+        let matches = document.cookie.match(new RegExp(
+            "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        ));
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+    };
+
     var initialCartIds = 0;
     try {
         initialCartIds = AppState.config.CS.SHOPPING_CART.cart_product_ids.length;
@@ -20,10 +27,10 @@ $(function () {
         function() {
             var backet_counter = $('.js-shopping-cart-button-container .x-header__controls-counter');
             var items = parseInt(backet_counter.text());
-            var isAlreadyShown = !sessionStorage.getItem('isIntentAlreadyShown');
+            var isAlreadyShown = !getCookie('isIntentAlreadyShown');
             if(items && isAlreadyShown && initialCartIds === items && $('#shopping_cart_list_overlay').length === 0) {
                 $('body').addClass('exit-intent-experiment-waiting-for-basket exit-intent-experiment-basket-fake-style');
-                // sessionStorage.setItem('isIntentAlreadyShown', 'yes');
+                document.cookie = 'isIntentAlreadyShown=yes';
                 backet_counter.click();
                 $.exitIntent('disable');
                 if(window.hj) {
