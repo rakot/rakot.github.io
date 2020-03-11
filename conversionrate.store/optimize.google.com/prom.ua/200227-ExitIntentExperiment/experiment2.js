@@ -2,6 +2,7 @@ $(function () {
     (function(a){function d(e){0<e.clientY||(b&&clearTimeout(b),0>=a.exitIntent.settings.sensitivity?a.event.trigger("exitintent"):b=setTimeout(function(){b=null;a.event.trigger("exitintent")},a.exitIntent.settings.sensitivity))}function c(){b&&(clearTimeout(b),b=null)}var b;a.exitIntent=function(b,f){a.exitIntent.settings=a.extend(a.exitIntent.settings,f);if("enable"==b)a(window).mouseleave(d),a(window).mouseenter(c);else if("disable"==b)c(),a(window).unbind("mouseleave",d),a(window).unbind("mouseenter",
         c);else throw"Invalid parameter to jQuery.exitIntent -- should be 'enable'/'disable'";};a.exitIntent.settings={sensitivity:300}})(jQuery);
 
+    var showIntentBlock = false;
     var getCookie = function(name) {
         let matches = document.cookie.match(new RegExp(
             "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
@@ -129,11 +130,12 @@ $(function () {
             if(updatedCount && updatedCount > initialCartIds) {
                 console.log('poll basket update');
                 // Added item into the basket
+                showIntentBlock = true;
                 initialCartIds = updatedCount;
                 var timestamp = new Date().getTime();
                 localStorage.setItem('intentPopupShowTimer', timestamp+60*1000);
             }
-        } else if(!document.hidden) {
+        } else if(!document.hidden && showIntentBlock === false) {
             //Timer is initialized and document is active so maybe need to show popup
             intentPopupShowTimer = parseInt(intentPopupShowTimer);
             var timestamp = new Date().getTime();
@@ -142,6 +144,7 @@ $(function () {
                 localStorage.setItem('intentPopupShowTimer', 'used');
                 $.exitIntent('enable');
                 $(document).bind('exitintent',function(){
+                    $.exitIntent('disable');
                     showPopup();
                 });
             }
