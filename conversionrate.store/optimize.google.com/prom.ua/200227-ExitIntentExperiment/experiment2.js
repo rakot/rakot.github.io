@@ -141,11 +141,14 @@ $(function () {
             var timestamp = new Date().getTime();
             if(timestamp > intentPopupShowTimer) {
                 // Let showup the popup
-                localStorage.setItem('intentPopupShowTimer', 'used');
                 $.exitIntent('enable');
                 $(document).bind('exitintent',function(){
                     $.exitIntent('disable');
-                    showPopup();
+                    intentPopupShowTimer = localStorage.getItem('intentPopupShowTimer');
+                    if(intentPopupShowTimer !== 'used') {
+                        localStorage.setItem('intentPopupShowTimer', 'used');
+                        showPopup();
+                    }
                 });
             }
         }
