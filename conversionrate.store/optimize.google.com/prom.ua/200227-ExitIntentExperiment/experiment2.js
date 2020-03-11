@@ -33,6 +33,13 @@ $(function () {
         var backet_counter = $('.js-shopping-cart-button-container .x-header__controls-counter');
         var items = parseInt(backet_counter.text());
         if(items && $('#shopping_cart_list_overlay').length === 0) {
+            $.exitIntent('disable');
+            var intentPopupShowTimer = localStorage.getItem('intentPopupShowTimer');
+            if(intentPopupShowTimer !== 'used') {
+                localStorage.setItem('intentPopupShowTimer', 'used');
+            }
+
+
             $('body').addClass('exit-intent-experiment-waiting-for-basket exit-intent-experiment-basket-fake-style');
 
             backet_counter.click();
@@ -143,12 +150,7 @@ $(function () {
                 // Let showup the popup
                 $.exitIntent('enable');
                 $(document).bind('exitintent',function(){
-                    $.exitIntent('disable');
-                    intentPopupShowTimer = localStorage.getItem('intentPopupShowTimer');
-                    if(intentPopupShowTimer !== 'used') {
-                        localStorage.setItem('intentPopupShowTimer', 'used');
-                        showPopup();
-                    }
+                    showPopup();
                 });
             }
         }
