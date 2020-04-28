@@ -1,0 +1,5 @@
+.live-chat-floating-duplicate-button {position: absolute; z-index: 1000000; width: 166px; height: 50px; border-radius: 60px; left: -180px; font-size: 18px;
+    line-height: 50px; text-indent: 55px; cursor: pointer; font-weight: bold; color: #fff; background: #4792DE url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAASFBMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////neHiwAAAAF3RSTlMAIN+fvxDvj89/r1AwYF9vTz9AH7CAcJyTC54AAADeSURBVHhehZDZbsUgDESNbcyWtdv8/5+2KAS4UdWeF4TOaBBD/+PXIPpDTsXRzJtiQksXrgoN23Ge5xbqJbtmGJY8dVxisGsmtlCXEVyzUo8HPiITOcC1+y55ux8BFgqQFo1g7Q2CRIrjMmvNJKRLFSgZltZxuOrD3WgEzF83u7cAXlSBLTQU472riL7fAiPF1tWHTAVKCbmrMJRgJw/0fkYTbYgwhjrubs+Q6+DnvNP0kFl+Wg87ARBlX0tZd/FkyH40iOEmujrtzLmHrCrCQATTg9GOL/qVJahm+pNvF1kMpckwzOoAAAAASUVORK5CYII=) center left 20px no-repeat;}
+
+
+.modal-container .live-chat-floating-duplicate-button {position: fixed; z-index: 100000; left: auto; right: 30px; bottom: 25px;}
