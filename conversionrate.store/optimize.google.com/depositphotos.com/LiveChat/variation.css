@@ -3,3 +3,5 @@
 
 
 .modal-container .live-chat-floating-duplicate-button {position: fixed; z-index: 100000; left: auto; right: 30px; bottom: 25px;}
+
+.experiment-cookie-bar-visible .top-button-wrapper .live-chat-floating-duplicate-button {bottom: 15px;}
