@@ -1,3 +1,4 @@
+console.log('Floating Experiment Loaded');
 Backbone.$(function () {
     var $ = Backbone.$;
 
