@@ -1,13 +1,6 @@
-hj('trigger', 'exp-sticky-chat');
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
-    'event': 'gaEv',
-    'eventCategory': 'Exp - sticky chat',
-    'eventAction': 'activated'
-});
-
 Backbone.$(function () {
     var $ = Backbone.$;
+    var experimentActivated = false;
 
     setInterval(function () {
         if($('section.cookie-bar:visible').length) {
@@ -19,6 +12,18 @@ Backbone.$(function () {
                 $('body').removeClass('experiment-cookie-bar-visible');
             }
         }
+
+        if(experimentActivated === false && $('.live-chat-floating-duplicate-button:visible').length) {
+            experimentActivated = true;
+            hj('trigger', 'exp-sticky-chat');
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'gaEv',
+                'eventCategory': 'Exp - sticky chat',
+                'eventAction': 'activated'
+            });
+        }
+
 
         if($('.top-button-wrapper').length && $('.top-button-wrapper .live-chat-floating-duplicate-button').length === 0) {
             var wrapper = $('.top-button-wrapper');
