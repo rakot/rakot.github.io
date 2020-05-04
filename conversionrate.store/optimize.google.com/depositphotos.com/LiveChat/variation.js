@@ -1,4 +1,11 @@
-console.log('Floating Experiment Loaded');
+hj('trigger', 'exp-sticky-chat');
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+    'event': 'gaEv',
+    'eventCategory': 'Exp - sticky chat',
+    'eventAction': 'activated'
+});
+
 Backbone.$(function () {
     var $ = Backbone.$;
 
@@ -18,6 +25,28 @@ Backbone.$(function () {
             wrapper.prepend('<div class="live-chat-floating-duplicate-button">Live chat</div>');
             $('.live-chat-floating-duplicate-button').click(function (e) {
                 e.stopImmediatePropagation();
+
+                // On product page
+                if($('.file-view-page_image-huge').length) {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        'event': 'gaEv',
+                        'eventCategory': 'Exp - sticky chat',
+                        'eventAction': 'Click on chat',
+                        'eventLabel': 'PDP'
+                    });
+                }
+                // On listing
+                else {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        'event': 'gaEv',
+                        'eventCategory': 'Exp - sticky chat',
+                        'eventAction': 'Click on chat',
+                        'eventLabel': 'Product listing'
+                    });
+                }
+
                 $('.cmp-livechat-online').click();
                 return false;
             });
@@ -27,6 +56,15 @@ Backbone.$(function () {
             $('.modal-container').append('<div class="live-chat-floating-duplicate-button">Live chat</div>');
             $('.modal-container .live-chat-floating-duplicate-button').click(function (e) {
                 e.stopImmediatePropagation();
+
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'gaEv',
+                    'eventCategory': 'Exp - sticky chat',
+                    'eventAction': 'Click on chat',
+                    'eventLabel': 'Modal PDP'
+                });
+
                 $('.cmp-livechat-online').click();
                 return false;
             });
