@@ -1,0 +1,7 @@
+.experiment-pdp-block {margin-top: 20px;}
+.experiment-pdp-block .experiment-carousel  {}
+.experiment-pdp-block .experiment-buy-block {}
+.experiment-pdp-block .product-gallery .flickity-prev-next-button {opacity: 1;}
+.experiment-pdp-block .buy-button-mobile {width: 100%; margin-top: 10px; background: #11415F; border-radius: 100px; padding: 7px 64px; text-align: center; color: #fff;}
+.experiment-pdp-block .buy-button-mobile .first-line {display: block; font-style: normal; font-weight: 900; font-size: 15px; line-height: 18px; text-align: center; text-transform: uppercase; color: #FFFFFF;}
+.experiment-pdp-block .buy-button-mobile .second-line {display: block; font-style: normal;font-weight: normal;font-size: 10px;line-height: 12px;text-align: center;letter-spacing: 0.025em;text-transform: uppercase;color: #FFFFFF;}
