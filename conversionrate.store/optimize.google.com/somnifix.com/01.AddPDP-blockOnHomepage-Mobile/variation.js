@@ -1,4 +1,12 @@
 $(function () {
+    hj('trigger', 'pdp_on_homepage');
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+        'event': 'event-to-ga',
+        'eventCategory': 'Exp - PDP on Homepage',
+        'eventAction': 'loaded'
+    });
+
     var container = $('#s-d1e202a5-0760-4602-81b0-89b3f970e472');
     var pdpBlock = $('<div class="experiment-pdp-block section">' +
         '<div class="experiment-carousel"></div>' +
@@ -342,5 +350,22 @@ $(function () {
         }, function () {
             window.location.href = 'https://somnifix.com/checkout';
         });
+
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'event': 'event-to-ga',
+            'eventCategory': 'Exp - PDP on Homepage',
+            'eventAction': 'Click on Buy now'
+        });
     });
+
+    $(document).on('click','.flickity-prev-next-button', function () {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'event': 'event-to-ga',
+            'eventCategory': 'Exp - PDP on Homepage',
+            'eventAction': 'Click on slider'
+        });
+    });
+
 });

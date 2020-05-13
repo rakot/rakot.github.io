@@ -1,4 +1,12 @@
 $(function () {
+    hj('trigger', 'pdp_on_homepage');
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+        'event': 'event-to-ga',
+        'eventCategory': 'Exp - PDP on Homepage',
+        'eventAction': 'loaded'
+    });
+
     var container = $('#s-d1e202a5-0760-4602-81b0-89b3f970e472');
     var pdpBlock = $('<div class="experiment-pdp-block section">' +
         '<div class="experiment-carousel"></div>' +
@@ -434,13 +442,72 @@ $(function () {
         }, function () {
             window.location.href = 'https://somnifix.com/checkout';
         });
+
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'event': 'event-to-ga',
+            'eventCategory': 'Exp - PDP on Homepage',
+            'eventAction': 'Click on Buy now'
+        });
     });
 
     $('.experiment-pdp-block .experiment-buy-block .swatch-element').click(function () {
         var self = $(this);
+        var rel = self.data('rel');
         $('.experiment-pdp-block .experiment-buy-block .swatch-element.active').removeClass('active');
         $('#calc-wrapper .on-pack-wrapper.active').removeClass('active');
-        $('#calc-wrapper .'+self.data('rel')).addClass('active');
+        $('#calc-wrapper .'+rel).addClass('active');
         self.addClass('active');
+
+        if(rel === 'on-pack-wrapper-1') {
+            window.dataLayer = window.dataLayer || [];
+            dataLayer.push({
+                'event': 'event-to-ga',
+                'eventCategory': 'Exp - PDP on Homepage',
+                'eventAction': 'Click on 4-week pack option'
+            });
+        } else if(rel === 'on-pack-wrapper-2') {
+            window.dataLayer = window.dataLayer || [];
+            dataLayer.push({
+                'event': 'event-to-ga',
+                'eventCategory': 'Exp - PDP on Homepage',
+                'eventAction': 'Click on 12-week pack option'
+            });
+        } else {
+            window.dataLayer = window.dataLayer || [];
+            dataLayer.push({
+                'event': 'event-to-ga',
+                'eventCategory': 'Exp - PDP on Homepage',
+                'eventAction': 'Click on Subscribe option'
+            });
+        }
+    });
+
+
+    $(document).on('click','.flickity-prev-next-button', function () {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'event': 'event-to-ga',
+            'eventCategory': 'Exp - PDP on Homepage',
+            'eventAction': 'Click on slider'
+        });
+    });
+
+    $(document).on('click','#shopify-section-product__main .on-qty-wrapper > span', function () {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'event': 'event-to-ga',
+            'eventCategory': 'Exp - PDP on Homepage',
+            'eventAction': 'Click to change product quantity'
+        });
+    });
+
+    $(document).on('click','#shopify-section-product__main .on-pack-wrapper .on-select', function () {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'event': 'event-to-ga',
+            'eventCategory': 'Exp - PDP on Homepage',
+            'eventAction': 'Click to select the country'
+        });
     });
 });
