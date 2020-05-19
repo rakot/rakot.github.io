@@ -1,4 +1,6 @@
 $(function () {
+    var recharge_id = '';
+
     hj('trigger', 'pdp_on_homepage');
     window.dataLayer = window.dataLayer || [];
     dataLayer.push({
@@ -48,7 +50,7 @@ $(function () {
                         '<div class="period-price">per 12 weeks</div>'+
                     '</div>' +
                 '</div>' +
-                '<div class="swatch-element"  data-rel="on-pack-wrapper-3" data-variant="30282132226091">' +
+                '<div class="swatch-element"  data-rel="on-pack-wrapper-3" id="recharge_id_element" data-variant="30282132226091">' +
                     '<div class="badge-container"><div class="best-deal-badge">Best Deal</div></div>' +
                     '<svg xmlns="http://www.w3.org/2000/svg" width="21" height="16" viewBox="0 0 21 16" fill="none">\n' +
                     '<path fill-rule="evenodd" clip-rule="evenodd" d="M2.24973 0.0568373C2.32605 0.0034822 2.41397 -0.0129724 2.49842 0.0102915L7.70371 1.44413C7.87627 1.49166 8 1.69356 8 1.92761V14.2623C8 14.5013 7.87114 14.7059 7.69404 14.7483L2.48876 15.9922C2.41422 16.01 2.33736 15.9972 2.26846 15.9554L0.217357 14.7115C0.0849457 14.6311 0 14.4556 0 14.2623V1.92761C0 1.74429 0.0764729 1.57606 0.19862 1.49068L2.24973 0.0568373ZM2.05111 1.31168L0.743612 2.22569V13.945L2.05111 14.7379V1.31168ZM2.79472 14.9157L7.25639 13.8495V2.32947L2.79472 1.10046V14.9157Z" fill=""></path>\n' +
@@ -394,6 +396,11 @@ $(function () {
     $.get('/products/mouth-strips-snoring-sleep-aid',function (res) {
         res = $(res.replace(/<img(?!.*?\scaptcha)[^>]*>/g,""));
 
+        recharge_id = res.find('option:contains("3 Pack Auto-Ship"):last').attr('value');
+        if(recharge_id) {
+            $('#recharge_id_element').data('variant', recharge_id);
+        }
+
         $('#calc-wrapper').append(res.find('.on-pack-wrapper-1').last().clone())
             .append(res.find('.on-pack-wrapper-2').last().clone())
             .append(res.find('.on-pack-wrapper-3').last().clone());
@@ -436,11 +443,18 @@ $(function () {
         var variant = $('.experiment-pdp-block .experiment-buy-block .swatch-element.active').data('variant');
         var qty = $('.experiment-pdp-block .experiment-buy-block .on-pack-wrapper.active .on-count').text();
 
-        $.post('/cart/add.js',{
-            id: variant,
-            quantity: qty
-        }, function () {
-            window.location.href = 'https://somnifix.com/checkout';
+        $.post('/cart/clear.js',{},function () {
+            $.post('/cart/add.js',{
+                id: variant,
+                quantity: qty
+            }, function () {
+                if(variant === recharge_id) {
+                    var paramCart = '&cart_token=' + (document.cookie.match('(^|; )cart=([^;]*)')||0)[2];
+                    window.location.href = 'https://checkout.rechargeapps.com/r/checkout?myshopify_domain=somnifix.myshopify.com'+paramCart;
+                } else {
+                    window.location.href = 'https://somnifix.com/checkout';
+                }
+            });
         });
 
         window.dataLayer = window.dataLayer || [];

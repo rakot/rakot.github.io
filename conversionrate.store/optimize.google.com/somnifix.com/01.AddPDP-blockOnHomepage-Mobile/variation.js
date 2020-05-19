@@ -344,11 +344,13 @@ $(function () {
         var variant = 6709349548075;
         var qty = 1;
 
-        $.post('/cart/add.js',{
-            id: variant,
-            quantity: qty
-        }, function () {
-            window.location.href = 'https://somnifix.com/checkout';
+        $.post('/cart/clear.js',{},function () {
+            $.post('/cart/add.js',{
+                id: variant,
+                quantity: qty
+            }, function () {
+                window.location.href = 'https://somnifix.com/checkout';
+            });
         });
 
         window.dataLayer = window.dataLayer || [];
