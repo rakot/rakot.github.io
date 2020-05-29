@@ -36,8 +36,8 @@ Backbone.$(function () {
 
     setInterval(function () {
         let countImages = $('.fav-panel__content .fav-list:not(.extra-clicking-action-done) .file-box__link:visible').length;
-        if(countImages) {
-            Backbone.$('.fav-panel__content .fav-panel__container ._favorite-file').each(function () {
+        if(countImages && $('.download-all-images').length === 0) {
+            Backbone.$('.fav-panel__content .fav-list:not(.extra-clicking-action-done)  ._favorite-file').each(function () {
                 let self = Backbone.$(this);
                 self.find('.icon-checkbox-l:not(.checked)').trigger('click');
             });
