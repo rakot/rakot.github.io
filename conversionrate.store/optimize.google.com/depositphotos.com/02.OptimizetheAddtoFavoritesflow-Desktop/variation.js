@@ -37,15 +37,13 @@ Backbone.$(function () {
     setInterval(function () {
         let countImages = $('.fav-panel__content .fav-panel__container:not(.extra-clicking-action-done) .file-box .file-box__link:visible').length;
         if(countImages) {
-            if($('.select-all._action .checkbox-box-partial').length === 1) {
-                $('.select-all._action .checkbox-box-partial').removeClass('checkbox-box-partial');
-                $('.select-all._action input:checked').removeAttr('checked');
-            }
-            if($('.select-all._action input:checked').length === 0) {
-                let downloadAllButton = $('<a class="download-all-images" href="/subscribe.html">Download '+countImages+' Images</a>');
-                $('.fav-panel__content .fav-panel__container:not(.extra-clicking-action-done)').addClass('extra-clicking-action-done').append(downloadAllButton);
-                $('.select-all._action > label').trigger('click');
-            }
+            Backbone.$('.fav-panel__content .fav-panel__container ._favorite-file').each(function () {
+                let self = Backbone.$(this);
+                self.find('.icon-checkbox-l:not(.checked)').trigger('click');
+            });
+
+            let downloadAllButton = $('<a class="download-all-images" href="/subscribe.html">Download '+countImages+' Images</a>');
+            $('.fav-panel__content .fav-panel__container:not(.extra-clicking-action-done)').addClass('extra-clicking-action-done').append(downloadAllButton);
         }
     }, 100);
 });
