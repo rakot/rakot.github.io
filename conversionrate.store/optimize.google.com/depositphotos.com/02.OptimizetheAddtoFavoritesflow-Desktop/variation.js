@@ -35,7 +35,7 @@ Backbone.$(function () {
     }, 500);
 
     setInterval(function () {
-        let countImages = $('.fav-panel__content .fav-panel__container:not(.extra-clicking-action-done) .file-box .file-box__link:visible').length;
+        let countImages = $('.fav-panel__content .fav-list:not(.extra-clicking-action-done) .file-box__link:visible').length;
         if(countImages) {
             Backbone.$('.fav-panel__content .fav-panel__container ._favorite-file').each(function () {
                 let self = Backbone.$(this);
@@ -43,7 +43,7 @@ Backbone.$(function () {
             });
 
             let downloadAllButton = $('<a class="download-all-images" href="/subscribe.html">Download '+countImages+' Images</a>');
-            $('.fav-panel__content .fav-panel__container:not(.extra-clicking-action-done)').addClass('extra-clicking-action-done').append(downloadAllButton);
+            $('.fav-panel__content .fav-list:not(.extra-clicking-action-done)').addClass('extra-clicking-action-done').append(downloadAllButton);
         }
     }, 100);
 });
