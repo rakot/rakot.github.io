@@ -20,7 +20,7 @@ body .file-thumb_image:hover .file-thumb__action-item.button-download {opacity: 
 
 .fav-panel__tab-icon.extra-notify-icon:after {content: ''; position: absolute; right: 0; top: 0; background: #E74C3C; border-radius: 5px; width: 5px; height: 5px;}
 
-.download-all-images {background: #E74C3C url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAYAAADwikbvAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABJSURBVHgB3ZLBCQAgCEW/0SBtlk1WmzSaGd0lDIJ6FxF5HxQBAxHJ8KAiy6LCg4rtw4CoTdLa92MwDwkiKgE3cO/9lnj8nmzNB53vfe/01KXfAAAAAElFTkSuQmCC) center right 35px no-repeat; border-radius: 30px; position: absolute; padding: 0 55px 0 35px; height: 44px; bottom: 20px; right: 20px; font-size: 15px; line-height: 44px; text-align: center; font-weight: bold; color: #fff;}
+.download-all-images {background: #E74C3C url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAYAAADwikbvAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABJSURBVHgB3ZLBCQAgCEW/0SBtlk1WmzSaGd0lDIJ6FxF5HxQBAxHJ8KAiy6LCg4rtw4CoTdLa92MwDwkiKgE3cO/9lnj8nmzNB53vfe/01KXfAAAAAElFTkSuQmCC) center right 35px no-repeat; z-index: 10; border-radius: 30px; position: absolute; padding: 0 55px 0 35px; height: 44px; bottom: 20px; right: 20px; font-size: 15px; line-height: 44px; text-align: center; font-weight: bold; color: #fff;}
 .download-all-images:hover {color: #fff;}
 
 
