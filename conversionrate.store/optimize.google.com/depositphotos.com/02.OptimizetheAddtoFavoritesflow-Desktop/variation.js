@@ -45,5 +45,8 @@ Backbone.$(function () {
             let downloadAllButton = $('<a class="download-all-images" href="/subscribe.html">Download '+countImages+' Images</a>');
             $('.fav-panel__content .fav-list:not(.extra-clicking-action-done)').addClass('extra-clicking-action-done').append(downloadAllButton);
         }
+
+        let selectedImages = $('.fav-panel__content .fav-list  ._favorite-file ._select.checked').length;
+        $('.fav-panel__content .fav-list .download-all-images').text('Download '+selectedImages+' Images');
     }, 100);
 });
