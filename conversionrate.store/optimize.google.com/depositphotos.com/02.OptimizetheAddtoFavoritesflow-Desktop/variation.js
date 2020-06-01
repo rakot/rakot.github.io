@@ -20,6 +20,15 @@ Backbone.$(function () {
         return "";
     };
 
+    hj('trigger', 'new_add_to_favorites_flow');
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        'event': 'gaEv',
+        'eventCategory': 'Exp - optimize add to favourites flow',
+        'eventAction': 'activated'
+    });
+
+
     setInterval(function () {
         $('.button-add-to-favorites:not(.button-add-to-favorites-extra-event)').addClass('button-add-to-favorites-extra-event').on('click',function () {
             $('.fav-panel__tab-icon').addClass('extra-notify-icon');
@@ -29,6 +38,13 @@ Backbone.$(function () {
                 if(favorites_extra_event !== 'done') {
                     $('.fav-panel__tab').trigger('click');
                     setCookie('favorites-extra-event','done');
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        'event': 'gaEv',
+                        'eventCategory': 'Exp - optimize add to favourites flow',
+                        'eventAction': 'Favourites menu activated'
+                    });
+                    hj('trigger', 'favorites_menu_activated');
                 }
             }
         });
@@ -43,6 +59,14 @@ Backbone.$(function () {
             });
 
             let downloadAllButton = $('<a class="download-all-images" href="/subscribe.html">Download '+countImages+' Images</a>');
+            downloadAllButton.click(function () {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'gaEv',
+                    'eventCategory': 'Exp - optimize add to favourites flow',
+                    'eventAction': 'Click to download images in the favourites menu'
+                });
+            });
             $('.fav-panel__content .fav-list:not(.extra-clicking-action-done)').addClass('extra-clicking-action-done').append(downloadAllButton);
         }
 
