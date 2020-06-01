@@ -1,21 +1,20 @@
 body .view-file-box:hover .view-file-box__action-holder {padding-bottom: 0;}
 body .view-file-box__action-holder {opacity: 1; text-align: left;}
 .view-file-box__action-item.button-add-to-favorites {position: absolute; right: 0;}
-.view-file-box__action-item.button-share {opacity: 0;}
-.view-file-box__action-item.button-download {opacity: 0;}
 
-body .view-file-box:hover .view-file-box__action-item.button-share {opacity: 1;}
-body .view-file-box:hover .view-file-box__action-item.button-download {opacity: 1;}
+
+body .view-file-box .view-file-box__action-holder > * {opacity: 0;}
+body .view-file-box .view-file-box__action-holder > .button-add-to-favorites {opacity: 1;}
+body .view-file-box:hover .view-file-box__action-holder > * {opacity: 1;}
 
 
 body .file-thumb_image:hover .file-thumb__action-box {padding-bottom: 0;}
 body .file-thumb__action-box {opacity: 1; text-align: left; display: block;}
 .file-thumb__action-item.button-add-to-favorites {position: absolute; right: 0;}
-.file-thumb__action-item.button-share {opacity: 0;}
-.file-thumb__action-item.button-download {opacity: 0;}
 
-body .file-thumb_image:hover .file-thumb__action-item.button-share {opacity: 1;}
-body .file-thumb_image:hover .file-thumb__action-item.button-download {opacity: 1;}
+body .file-thumb_image .file-thumb__action-box > * {opacity: 0;}
+body .file-thumb_image .file-thumb__action-box > .button-add-to-favorites {opacity: 1;}
+body .file-thumb_image:hover .file-thumb__action-box > * {opacity: 1;}
 
 
 .fav-panel__tab-icon.extra-notify-icon:after {content: ''; position: absolute; right: 0; top: 0; background: #E74C3C; border-radius: 5px; width: 5px; height: 5px;}
