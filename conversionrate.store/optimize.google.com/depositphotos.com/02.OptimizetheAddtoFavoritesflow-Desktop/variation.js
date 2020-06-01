@@ -24,7 +24,7 @@ Backbone.$(function () {
         $('.button-add-to-favorites:not(.button-add-to-favorites-extra-event)').addClass('button-add-to-favorites-extra-event').on('click',function () {
             $('.fav-panel__tab-icon').addClass('extra-notify-icon');
 
-            if($('.fav-panel__wrapper:visible').length === 0) {
+            if($('.fav-panel__wrapper:visible').length === 0 && Backbone.$('.not-auth-box__btn').length === 0) {
                 var favorites_extra_event = getCookie('favorites-extra-event');
                 if(favorites_extra_event !== 'done') {
                     $('.fav-panel__tab').trigger('click');
