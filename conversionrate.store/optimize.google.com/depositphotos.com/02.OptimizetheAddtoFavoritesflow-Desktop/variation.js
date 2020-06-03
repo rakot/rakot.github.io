@@ -68,7 +68,7 @@ Backbone.$(function () {
                 });
             });
             $('.fav-panel__content .fav-list:not(.extra-clicking-action-done)').addClass('extra-clicking-action-done');
-            $('.fav-panel__content .fav-panel__files').append(downloadAllButton);
+            $('.fav-panel__content .fav-panel__container').append(downloadAllButton);
             if(countImages === 0) {
                 downloadAllButton.hide();
             }
