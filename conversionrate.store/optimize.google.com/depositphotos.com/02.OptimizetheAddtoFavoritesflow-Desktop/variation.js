@@ -75,6 +75,12 @@ Backbone.$(function () {
         }
 
         let selectedImages = $('.fav-panel__content .fav-list  ._favorite-file ._select.checked').length;
-        $('.fav-panel__content .fav-list .download-all-images').text('Download '+selectedImages+' Images');
+        let downloadAllButton = $('.fav-panel__content .download-all-images');
+        downloadAllButton.text('Download '+selectedImages+' Images');
+        if(selectedImages === 0) {
+            downloadAllButton.hide();
+        } else {
+            downloadAllButton.show();
+        }
     }, 100);
 });
