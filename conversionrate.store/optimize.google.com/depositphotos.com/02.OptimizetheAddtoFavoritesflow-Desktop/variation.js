@@ -74,10 +74,11 @@ Backbone.$(function () {
             }
         }
 
+        let noPlans = $('.user-bar-item.no-plans-box').length;
         let selectedImages = $('.fav-panel__content .fav-list  ._favorite-file ._select.checked').length;
         let downloadAllButton = $('.fav-panel__content .download-all-images');
         downloadAllButton.text('Download '+selectedImages+' Images');
-        if(selectedImages === 0) {
+        if(selectedImages === 0 || noPlans === 0) {
             downloadAllButton.hide();
         } else {
             downloadAllButton.show();
