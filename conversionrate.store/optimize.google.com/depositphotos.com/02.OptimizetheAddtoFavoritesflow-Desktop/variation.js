@@ -67,7 +67,11 @@ Backbone.$(function () {
                     'eventAction': 'Click to download images in the favourites menu'
                 });
             });
-            $('.fav-panel__content .fav-list:not(.extra-clicking-action-done)').addClass('extra-clicking-action-done').append(downloadAllButton);
+            $('.fav-panel__content .fav-list:not(.extra-clicking-action-done)').addClass('extra-clicking-action-done');
+            $('.fav-panel__content .fav-panel__files').append(downloadAllButton);
+            if(countImages === 0) {
+                downloadAllButton.hide();
+            }
         }
 
         let selectedImages = $('.fav-panel__content .fav-list  ._favorite-file ._select.checked').length;
