@@ -51,14 +51,8 @@ Backbone.$(function () {
     }, 500);
 
     setInterval(function () {
-        let countImages = $('.fav-panel__content .fav-list:not(.extra-clicking-action-done) .file-box__link:visible').length;
-        if(countImages && $('.download-all-images').length === 0) {
-            Backbone.$('.fav-panel__content .fav-list:not(.extra-clicking-action-done)  ._favorite-file').each(function () {
-                let self = Backbone.$(this);
-                self.find('.icon-checkbox-l:not(.checked)').trigger('click');
-            });
-
-            let downloadAllButton = $('<a class="download-all-images" href="/subscribe.html">Download '+countImages+' Images</a>');
+        if($('.download-all-images').length === 0) {
+            let downloadAllButton = $('<a class="download-all-images" href="/subscribe.html">Download Images</a>');
             downloadAllButton.click(function () {
                 window.dataLayer = window.dataLayer || [];
                 window.dataLayer.push({
@@ -67,12 +61,14 @@ Backbone.$(function () {
                     'eventAction': 'Click to download images in the favourites menu'
                 });
             });
-            $('.fav-panel__content .fav-list:not(.extra-clicking-action-done)').addClass('extra-clicking-action-done');
             $('.fav-panel__content .fav-panel__container').append(downloadAllButton);
-            if(countImages === 0) {
-                downloadAllButton.hide();
-            }
         }
+
+        $('.fav-panel__content .fav-list ._favorite-file:not(.extra-clicking-action-done)').each(function () {
+            let self = $(this);
+            self.addClass('extra-clicking-action-done');
+            self.find('.icon-checkbox-l:not(.checked)').trigger('click');
+        });
 
         let noPlans = $('.user-bar-item.no-plans-box').length;
         let selectedImages = $('.fav-panel__content .fav-list  ._favorite-file ._select.checked').length;
