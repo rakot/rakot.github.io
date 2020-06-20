@@ -1,4 +1,12 @@
 Backbone.$(function () {
+    hj('trigger', 'optimize_checkout');
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        'event': 'gaEv',
+        'eventCategory': 'Exp - optimize checkout',
+        'eventAction': 'eperiment activated'
+    });
+
     var $ = Backbone.$;
     var leftCell =  $('.billing-page__cell').first().addClass('first-cell');
     var rightCell = $('.billing-page__cell').last().addClass('last-cell');
@@ -19,6 +27,19 @@ Backbone.$(function () {
     rightCell.prepend(billingNext);
     rightCell.prepend(billing);
 
+    var processHoverEvent = 1;
+    $('.billing-process__btn').hover(function () {
+        if(processHoverEvent) {
+            processHoverEvent = 0;
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'gaEv',
+                'eventCategory': 'Exp - optimize checkout',
+                'eventAction': 'process order hover popup activated'
+            });
+        }
+    });
+
 
     $('.billing-page__container .billing-process .billing-process__btn')
         .after('<div class="billing-process__btn-dsc">' +
@@ -37,6 +58,12 @@ Backbone.$(function () {
     var checkInterval = setInterval(function () {
         if(Date.now() - timer > 9000) {
             $('.one-step-away-overlay').show();
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'gaEv',
+                'eventCategory': 'Exp - optimize checkout',
+                'eventAction': '9 seconds popup activated'
+            });
         }
     },1);
 });
