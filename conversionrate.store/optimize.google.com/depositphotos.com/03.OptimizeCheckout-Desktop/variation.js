@@ -1,4 +1,9 @@
 Backbone.$(function () {
+    var image = sessionStorage.getItem('ItemMaxSizeLoad');
+    if(!image) {
+        return false;
+    }
+
     hj('trigger', 'optimize_checkout');
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
@@ -17,7 +22,7 @@ Backbone.$(function () {
         '</div>');
 
     leftCell.prepend($('.order-info_custom .order-info__items'));
-    leftCell.prepend('<img class="order-image-preview" src="https://st3.depositphotos.com/3131049/36522/i/450/depositphotos_365223708-stock-photo-bright-yellow-sunflower-backdrop-space.jpg">');
+    leftCell.prepend($('<img class="order-image-preview">').attr('src', image));
     leftCell.prepend('<p class="order-info__title_caption">You are one step away from downloading this image with the selected plan.</p>');
     leftCell.prepend($('.order-info__title'));
 
