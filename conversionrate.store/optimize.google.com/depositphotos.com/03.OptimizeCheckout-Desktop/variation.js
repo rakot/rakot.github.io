@@ -57,7 +57,7 @@ Backbone.$(function () {
                 '<div class="billing-process__btn-dsc-gray">Cancel anytime</div>' +
                 '</div>');
     };
-    setTimeout(applyStyle, 100);
+    setInterval(applyStyle, 100);
 
     $('body').append('<div class="one-step-away-overlay"><div class="one-step-away-window"><div class="one-step-away-close"></div><div class="one-step-away-wrapper"><h4>You are one step away<br>from downloading your image</h4><p>After completing your order you will be able to download the selected image <br> and other images according to your plan.</p></div></div></div>');
     $('.one-step-away-overlay .one-step-away-close').click(function () {
