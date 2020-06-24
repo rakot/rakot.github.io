@@ -2,7 +2,6 @@ Backbone.$(function () {
     var $ = Backbone.$;
     var image = sessionStorage.getItem('ItemMaxSizeLoad');
     if(!image) {
-        $('.billing-page__wrap').addClass('experiment-applied');
         return false;
     }
 

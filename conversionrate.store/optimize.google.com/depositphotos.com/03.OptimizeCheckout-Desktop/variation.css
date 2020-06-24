@@ -8,8 +8,7 @@
 
 .order-image-preview {width: 100%; border-radius: 10px;}
 
-body .billing-page__wrap {flex-wrap: wrap; visibility: hidden;}
-body .billing-page__wrap.experiment-applied {visibility: visible;}
+body .billing-page__wrap {flex-wrap: wrap;}
 
 .billing-page__cell.first-cell {padding-left: 0;}
 .clearfix::after {content: "";clear: both;display: table;}
