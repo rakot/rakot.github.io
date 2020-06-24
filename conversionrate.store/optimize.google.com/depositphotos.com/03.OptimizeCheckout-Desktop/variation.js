@@ -13,7 +13,29 @@ Backbone.$(function () {
         'eventAction': 'eperiment activated'
     });
 
+    var processHoverEvent = 1;
+
     var applyStyle = function () {
+        if($('.billing-process__btn-dsc').length === 0) {
+            $('.billing-process__btn').unbind('hover').hover(function () {
+                if(processHoverEvent) {
+                    processHoverEvent = 0;
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        'event': 'gaEv',
+                        'eventCategory': 'Exp - optimize checkout',
+                        'eventAction': 'process order hover popup activated'
+                    });
+                }
+            });
+
+            $('.billing-page__container .billing-process .billing-process__btn')
+                .after('<div class="billing-process__btn-dsc">' +
+                    '<div class="billing-process__btn-dsc-green">You are one step away from downloading the selected image</div>' +
+                    '<div class="billing-process__btn-dsc-gray">Cancel anytime</div>' +
+                    '</div>');
+        }
+
         if($('.billing-page__wrap').hasClass('experiment-applied')) {
             return false;
         }
@@ -36,25 +58,6 @@ Backbone.$(function () {
 
         rightCell.prepend(billingNext);
         rightCell.prepend(billing);
-
-        var processHoverEvent = 1;
-        $('.billing-process__btn').hover(function () {
-            if(processHoverEvent) {
-                processHoverEvent = 0;
-                window.dataLayer = window.dataLayer || [];
-                window.dataLayer.push({
-                    'event': 'gaEv',
-                    'eventCategory': 'Exp - optimize checkout',
-                    'eventAction': 'process order hover popup activated'
-                });
-            }
-        });
-
-        $('.billing-page__container .billing-process .billing-process__btn')
-            .after('<div class="billing-process__btn-dsc">' +
-                '<div class="billing-process__btn-dsc-green">You are one step away from downloading the selected image</div>' +
-                '<div class="billing-process__btn-dsc-gray">Cancel anytime</div>' +
-                '</div>');
     };
     setInterval(applyStyle, 100);
 
