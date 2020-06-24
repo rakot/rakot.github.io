@@ -1,6 +1,8 @@
 Backbone.$(function () {
+    var $ = Backbone.$;
     var image = sessionStorage.getItem('ItemMaxSizeLoad');
     if(!image) {
+        $('.billing-page__wrap').addClass('experiment-applied');
         return false;
     }
 
@@ -11,8 +13,6 @@ Backbone.$(function () {
         'eventCategory': 'Exp - optimize checkout',
         'eventAction': 'eperiment activated'
     });
-
-    var $ = Backbone.$;
 
     var applyStyle = function () {
         if($('.billing-page__wrap').hasClass('experiment-applied')) {

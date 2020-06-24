@@ -8,7 +8,9 @@
 
 .order-image-preview {width: 100%; border-radius: 10px;}
 
-body .billing-page__wrap {flex-wrap: wrap;}
+body .billing-page__wrap {flex-wrap: wrap; visibility: hidden;}
+body .billing-page__wrap.experiment-applied {visibility: visible;}
+
 .billing-page__cell.first-cell {padding-left: 0;}
 .clearfix::after {content: "";clear: both;display: table;}
 body .order-info__items {padding-left: 0;}
@@ -30,3 +32,4 @@ body .order-info__title_caption {font-size: 13px; line-height: 15px; color: #3C3
 .one-step-away-overlay .one-step-away-window .one-step-away-wrapper {padding: 45px;}
 .one-step-away-overlay .one-step-away-window h4{font-weight: bold; font-size: 26px; margin: 0; line-height: 30px; text-align: center; color: #3C3C3C; padding-bottom: 24px;}
 .one-step-away-overlay .one-step-away-window p {font-size: 16px;line-height: 18px;text-align: center;color: #3C3C3C; margin: 0;}
+
