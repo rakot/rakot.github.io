@@ -69,7 +69,7 @@ Backbone.$(function () {
         timer = Date.now();
     });
     var checkInterval = setInterval(function () {
-        if(Date.now() - timer > 9000) {
+        if(Date.now() - timer > 15000) {
             $('.one-step-away-overlay').show();
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
