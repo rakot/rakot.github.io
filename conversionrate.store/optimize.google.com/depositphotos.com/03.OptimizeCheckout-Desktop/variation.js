@@ -72,9 +72,17 @@ Backbone.$(function () {
             '</div>');
 
         // leftCell.prepend($('.order-info_custom .order-info__items'));
-        leftCell.prepend($('<img class="order-image-preview">').attr('src', image));
+        var image = $('<img class="order-image-preview">').attr('src', image);
+        leftCell.prepend(image);
         leftCell.prepend('<p class="order-info__title_caption">You are one step away from downloading this image with the selected plan.</p>');
         leftCell.prepend($('.order-info__title'));
+
+        image.load(function () {
+            var height = $('.order-image-preview').height();
+            var offset = $('.order-image-preview').position;
+            var top = height+offset.top+20;
+            $('.order-info_custom .order-info__items').css('top',top+'px');
+        });
 
         var billing = $('.billing-pay__pay-methods');
         var billingNext = billing.nextAll();
