@@ -1,5 +1,27 @@
 Backbone.$(function () {
     var $ = Backbone.$;
+    var jQuery = $;
+    var setCookie = function(cname, cvalue) {
+        document.cookie = cname + "=" + cvalue + ";path=/";
+    };
+
+    var getCookie = function(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    };
+    (function(a){function d(e){0<e.clientY||(b&&clearTimeout(b),0>=a.exitIntent.settings.sensitivity?a.event.trigger("exitintent"):b=setTimeout(function(){b=null;a.event.trigger("exitintent")},a.exitIntent.settings.sensitivity))}function c(){b&&(clearTimeout(b),b=null)}var b;a.exitIntent=function(b,f){a.exitIntent.settings=a.extend(a.exitIntent.settings,f);if("enable"==b)a(window).mouseleave(d),a(window).mouseenter(c);else if("disable"==b)c(),a(window).unbind("mouseleave",d),a(window).unbind("mouseenter",
+        c);else throw"Invalid parameter to jQuery.exitIntent -- should be 'enable'/'disable'";};a.exitIntent.settings={sensitivity:300}})(jQuery);
     var image = sessionStorage.getItem('ItemMaxSizeLoad');
     if(!image) {
         return false;
@@ -67,12 +89,23 @@ Backbone.$(function () {
     });
 
 
+    var popupShown = false;
+    if(getCookie('checkoutExitPopupShown') === 'yes') {
+        popupShown = true;
+    }
     var timer = Date.now();
     $(document).on('mousemove click',function () {
         timer = Date.now();
     });
-    var checkInterval = setInterval(function () {
-        if(Date.now() - timer > 15000) {
+
+
+    $(document).bind('exitintent',
+        function() {
+            if(popupShown) {
+                return;
+            }
+            setCookie('checkoutExitPopupShown','yes');
+            popupShown = true;
             $('.one-step-away-overlay').show();
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
@@ -80,7 +113,22 @@ Backbone.$(function () {
                 'eventCategory': 'Exp - optimize checkout',
                 'eventAction': '9 seconds popup activated'
             });
+        });
+    var checkInterval = setInterval(function () {
+        if(Date.now() - timer > 15000) {
             clearInterval(checkInterval);
+            if(popupShown) {
+                return;
+            }
+            setCookie('checkoutExitPopupShown','yes');
+            popupShown = true;
+            $('.one-step-away-overlay').show();
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'gaEv',
+                'eventCategory': 'Exp - optimize checkout',
+                'eventAction': '9 seconds popup activated'
+            });
         }
     },1);
 });
