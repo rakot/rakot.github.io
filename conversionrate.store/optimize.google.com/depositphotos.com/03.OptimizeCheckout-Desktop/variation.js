@@ -71,7 +71,7 @@ Backbone.$(function () {
             '<div class="experiment-progress-bar"><div class="experiment-progress-bar-fill">75% done</div></div>' +
             '</div>');
 
-        leftCell.prepend($('.order-info_custom .order-info__items'));
+        // leftCell.prepend($('.order-info_custom .order-info__items'));
         leftCell.prepend($('<img class="order-image-preview">').attr('src', image));
         leftCell.prepend('<p class="order-info__title_caption">You are one step away from downloading this image with the selected plan.</p>');
         leftCell.prepend($('.order-info__title'));
