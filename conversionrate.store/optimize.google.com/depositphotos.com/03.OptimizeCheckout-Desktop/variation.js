@@ -72,12 +72,12 @@ Backbone.$(function () {
             '</div>');
 
         // leftCell.prepend($('.order-info_custom .order-info__items'));
-        var image = $('<img class="order-image-preview">').attr('src', image);
-        leftCell.prepend(image);
+        var img = $('<img class="order-image-preview">').attr('src', image);
+        leftCell.prepend(img);
         leftCell.prepend('<p class="order-info__title_caption">You are one step away from downloading this image with the selected plan.</p>');
         leftCell.prepend($('.order-info__title'));
 
-        image.load(function () {
+        img.load(function () {
             var height = $('.order-image-preview').height();
             var offset = $('.order-image-preview').position;
             var top = height+offset.top+20;
