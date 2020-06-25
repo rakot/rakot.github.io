@@ -12,8 +12,10 @@ body .billing-page__wrap {flex-wrap: wrap; position: relative;}
 
 .billing-page__cell.first-cell {padding-left: 0;}
 .clearfix::after {content: "";clear: both;display: table;}
-body .order-info__items {padding-left: 0; position: absolute; left: 50px; top: 0;}
+body .order-info__items {padding-left: 0;}
 .order-info_custom .order-info__details {position: static;}
+
+body.experiment-applied .order-info__items {position: absolute; left: 50px; top: 0;}
 
 body .order-info_custom .order-info__sep-box {display: none;}
 body .order-info_custom {padding-top: 15px; position: static;}

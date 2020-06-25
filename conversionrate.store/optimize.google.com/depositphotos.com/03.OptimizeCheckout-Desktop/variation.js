@@ -39,6 +39,7 @@ Backbone.$(function () {
     var processHoverEvent = 1;
 
     var applyStyle = function () {
+        $('body').addClass('experiment-applied');
         if($('.billing-process__btn-dsc').length === 0) {
             $('.billing-process__btn').unbind('hover').hover(function () {
                 if(processHoverEvent) {
@@ -79,9 +80,11 @@ Backbone.$(function () {
 
         img.load(function () {
             var height = $('.order-image-preview').height();
-            var offset = $('.order-image-preview').position;
+            var offset = $('.order-image-preview').position();
             var top = height+offset.top+20;
+            var margin = $('.order-info_custom .order-info__items').height();
             $('.order-info_custom .order-info__items').css('top',top+'px');
+            $('.order-image-preview').css('margin-bottom', margin+'px');
         });
 
         var billing = $('.billing-pay__pay-methods');
