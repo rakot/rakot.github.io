@@ -30,7 +30,6 @@ $(function () {
 
     let isSliding = false;
     let buildItemFromPage = function(page, href) {
-        console.log(page.find('#ProductPrice-product-template').html());
         return $('<div class="cart-popup__carousel_slide"></div>').append(
             $('<a>').click(function () {
                 if(!isSliding && 0) {
@@ -83,9 +82,9 @@ $(function () {
                                 adaptiveHeight: true,
                                 nextArrow: '.drawer__cart .show-more-button'
                             });
+                            $(document).resize();
                         }
                     }, 100);
-                    $(document).resize();
                 });
             }
         });
