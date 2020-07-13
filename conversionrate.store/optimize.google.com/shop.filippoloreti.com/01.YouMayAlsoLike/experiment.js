@@ -114,7 +114,6 @@ $(function () {
                                         'eventLabel': 'product',
                                         'eventValue': slide_num
                                     });
-                                    console.log(slide_num);
                                 }
                                 isSliding = false;
                             });
