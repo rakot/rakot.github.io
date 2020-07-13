@@ -32,7 +32,8 @@ $(function () {
     let buildItemFromPage = function(page, href) {
         return $('<div class="cart-popup__carousel_slide"></div>').append(
             $('<a>').click(function () {
-                if(!isSliding && 0) {
+                if(!isSliding) {
+                    window.dataLayer = window.dataLayer || [];
                     dataLayer.push({
                         'event': 'event-to-ga',
                         'eventCategory': 'Exp - Slide-In Cart',
@@ -70,11 +71,26 @@ $(function () {
                     slickContainer.append(buildItemFromPage(page1, collection[0]));
                     slickContainer.append(buildItemFromPage(page2, collection[1]));
                     slickContainer.append(buildItemFromPage(page3, collection[2]));
-
+                    $('.drawer__cart .carousel-wrapper .show-more-button').click(function () {
+                        window.dataLayer = window.dataLayer || [];
+                        dataLayer.push({
+                            'event': 'event-to-ga',
+                            'eventCategory': 'Exp - Slide-In Cart',
+                            'eventAction': 'click',
+                            'eventLabel': 'Show more'
+                        });
+                    });
 
                     let slickPoller = setInterval(function () {
                         if(slickContainer.is(':visible')) {
                             clearInterval(slickPoller);
+                            hj('trigger', 'slide-in_cart');
+                            window.dataLayer = window.dataLayer || [];
+                            dataLayer.push({
+                                'event': 'event-to-ga',
+                                'eventCategory': 'Exp - Slide-In Cart',
+                                'eventAction': 'loaded'
+                            });
                             slickContainer.slick({
                                 infinite: true,
                                 slidesToShow: 2,
@@ -83,6 +99,25 @@ $(function () {
                                 nextArrow: '.drawer__cart .show-more-button'
                             });
                             $(document).resize();
+                            slickContainer.on('beforeChange', function() {
+                                isSliding = true;
+                            });
+                            let slide_num = -1;
+                            slickContainer.on('afterChange', function(slick, slide) {
+                                if(slide.currentSlide > slide_num) {
+                                    slide_num = slide.currentSlide;
+                                    window.dataLayer = window.dataLayer || [];
+                                    dataLayer.push({
+                                        'event': 'event-to-ga',
+                                        'eventCategory': 'Exp - Slide-In Cart',
+                                        'eventAction': 'scroll',
+                                        'eventLabel': 'product',
+                                        'eventValue': slide_num
+                                    });
+                                    console.log(slide_num);
+                                }
+                                isSliding = false;
+                            });
                         }
                     }, 100);
                 });
