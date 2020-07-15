@@ -1,9 +1,14 @@
-.drawer__cart .carousel-wrapper {width: 100%; position: relative; padding: 20px 0 10px;}
-
-.drawer__cart .carousel-wrapper-content .cart-popup__carousel_slide {border: 1px #efefef solid; margin: 0 5px; padding-bottom: 5px;}
-.drawer__cart .carousel-wrapper-content .cart-popup__carousel_slide .cart-popup__carousel_slide_title {text-align: center;}
-.drawer__cart .carousel-wrapper-content .cart-popup__carousel_slide .cart-popup__carousel_slide_price {display: block; text-align: center;}
+.drawer__cart .carousel-wrapper {width: 100%; position: relative; padding: 20px 30px 10px;}
+.drawer__cart .carousel-wrapper h4 {font-weight: 500; font-size: 14px; line-height: 17px; color: #272C3B; margin-bottom: 20px;}
+.drawer__cart .carousel-wrapper .cart-popup__carousel_slide_image {max-height: 125px; margin: 10px auto;}
+.drawer__cart .carousel-wrapper-content .cart-popup__carousel_slide {border: 1px #efefef solid; margin: 0 5px; padding: 5px;}
+.drawer__cart .carousel-wrapper-content .cart-popup__carousel_slide .cart-popup__carousel_slide_title {text-align: center; font-size: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.drawer__cart .carousel-wrapper-content .cart-popup__carousel_slide .cart-popup__carousel_slide_price {display: block; text-align: center; font-size: 10px;}
 .drawer__cart .carousel-wrapper-content .cart-popup__carousel_slide .cart-popup__carousel_slide_price span {display: block; text-align: center;}
 
-.drawer__cart .carousel-wrapper .show-more-button {position: absolute; background: #7fd489; font-size: 10px; color: #FFFFFF; letter-spacing: 1px;text-align: center; right: 25px; top: -12px; padding: 5px 10px; border-radius: 20px; font-weight: bold; text-transform: uppercase; cursor: pointer;}
+.drawer__cart .carousel-wrapper .show-more-button {position: absolute; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAYAAADAp4fuAAAAXUlEQVQIW2NQ07UNUNOxPq9g4CDAAAMaGg4K6trW90ESGgYWCnAJA6AqdaCguq7VfRQJDQOgDh3r/0C8HywAMg+kXV0bqFIDqBKsQhdopjbQMgWoZRq6VgkoAkAAAGbvGbv5bFWUAAAAAElFTkSuQmCC) right 10px center no-repeat; border: 1px solid #000000; font-size: 10px; color: #272C3B; text-align: center; right: 30px; top: 12px; padding: 5px 20px 5px 10px; text-transform: uppercase; cursor: pointer;}
 .drawer__cart .carousel-wrapper .slick-prev.slick-arrow {display: none !important;}
+
+
+.drawer__cart .carousel-wrapper .slick-slider .slick-track {display: flex;}
+.drawer__cart .carousel-wrapper .slick-initialized .slick-slide {height: auto;}
