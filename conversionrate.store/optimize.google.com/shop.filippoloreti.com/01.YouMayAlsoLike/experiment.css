@@ -1,6 +1,6 @@
 .drawer__cart .carousel-wrapper {width: 100%; position: relative; padding: 20px 30px 10px;}
-.drawer__cart .carousel-wrapper h4 {font-weight: 500; font-size: 14px; line-height: 17px; color: #272C3B; margin-bottom: 20px;}
-.drawer__cart .carousel-wrapper .cart-popup__carousel_slide_image {max-height: 125px; margin: 10px auto;}
+.drawer__cart .carousel-wrapper h4 {font-weight: 500; font-size: 14px; line-height: 17px; color: #272C3B; margin-bottom: 10px;}
+.drawer__cart .carousel-wrapper .cart-popup__carousel_slide_image {max-height: 100px; margin: 5px auto;}
 .drawer__cart .carousel-wrapper-content .cart-popup__carousel_slide {border: 1px #efefef solid; margin: 0 5px; padding: 5px;}
 .drawer__cart .carousel-wrapper-content .cart-popup__carousel_slide .cart-popup__carousel_slide_title {text-align: center; font-size: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .drawer__cart .carousel-wrapper-content .cart-popup__carousel_slide .cart-popup__carousel_slide_price {display: block; text-align: center; font-size: 10px;}
