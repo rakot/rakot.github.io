@@ -12,3 +12,5 @@
 
 .drawer__cart .carousel-wrapper .slick-slider .slick-track {display: flex;}
 .drawer__cart .carousel-wrapper .slick-initialized .slick-slide {height: auto;}
+
+body .drawer__footer .cart-subtotal {padding: 15px 25px;}
