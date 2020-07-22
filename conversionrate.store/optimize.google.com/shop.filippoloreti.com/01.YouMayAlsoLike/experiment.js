@@ -70,7 +70,10 @@ $(function () {
             ).append(
                 $('<div class="cart-popup__carousel_slide_price">').html($('<span class="money"></span>').text('$'+page.price))
             ).append(
-                $('<div class="cart-popup__carousel_slide_add_button">Add</div>')
+                $('<div class="cart-popup__carousel_slide_add_button">Add</div>').click(function (e) {
+                    e.stopImmediatePropagation();
+                    return false;
+                })
             )
         )
     };
