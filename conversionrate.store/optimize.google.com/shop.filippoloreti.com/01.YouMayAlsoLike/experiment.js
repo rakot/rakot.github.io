@@ -69,10 +69,23 @@ $(function () {
                 $('<div class="cart-popup__carousel_slide_title"></div>').html(page.title)
             ).append(
                 $('<div class="cart-popup__carousel_slide_price">').html($('<span class="money"></span>').text('$'+page.price))
+            ).append(
+                $('<div class="cart-popup__carousel_slide_add_button">Add</div>')
             )
         )
     };
 
+    let addProduct = function(id) {
+        $.ajax({
+            type: 'POST',
+            url: '/cart/add.js',
+            data: {'form_type': 'product', 'id':id},
+            dataType: 'json',
+            success: function () {
+                $('body').on('added.ajaxProduct');
+            }
+        });
+    };
 
     let cartPoller = setInterval(function () {
         if($('.drawer__cart .carousel-wrapper').length) {
