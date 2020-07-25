@@ -70,7 +70,7 @@ $(function () {
             data: id,
             dataType: 'json'
         }).done(function () {
-            $('body').on('added.ajaxProduct');
+            $('.js-qty__num').first().change();
         });
     };
 
