@@ -67,7 +67,7 @@ $(function () {
         $.ajax({
             type: 'POST',
             url: '/cart/add.js',
-            data: {'form_type': 'product', 'id':id},
+            data: id,
             dataType: 'json',
             success: function () {
                 $('body').on('added.ajaxProduct');
