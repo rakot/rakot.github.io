@@ -68,10 +68,9 @@ $(function () {
             type: 'POST',
             url: '/cart/add.js',
             data: id,
-            dataType: 'json',
-            success: function () {
-                $('body').on('added.ajaxProduct');
-            }
+            dataType: 'json'
+        }).done(function () {
+            $('body').on('added.ajaxProduct');
         });
     };
 
@@ -88,7 +87,6 @@ $(function () {
             }
         });
 
-        console.log(collection);
         if(collection) {
             $('.grid--full.cart-subtotal').after('<div class="carousel-wrapper"><h4>You may also like:</h4><div class="show-more-button">Show More</div><div class="carousel-wrapper-content"></div></div>');
             let slickContainer = $('.drawer__cart .carousel-wrapper-content');
