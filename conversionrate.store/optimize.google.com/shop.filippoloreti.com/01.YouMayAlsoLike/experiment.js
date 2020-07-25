@@ -1,44 +1,25 @@
 $(function () {
+
     let top_sellers = {
-        '/mens-watches/products/ascari-two-tone-gold-steel-link?variant=22619994882133': ['/accessories/products/brown-italian-leather-strap-with-alligator-pattern-florence?variant=21261996589141', '/accessories/products/stainless-steel-black-mesh-bracelet?variant=12594184912949', '/accessories/products/black-vintage-italian-leather-strap'],
-        '/mens-watches/products/okeanos-green-steel-link?variant=22077049045077': ['/accessories/products/stainless-steel-mesh-bracelet?variant=12594134417461','/accessories/products/light-grey-vintage-italian-leather-strap','/accessories/products/https-yourstore-myshopify-com-products-green-italian-leather-strap'],
-        '/mens-watches/products/ascari-black-steel-link?variant=22235605827669': ['/accessories/products/black-vintage-italian-leather-strap','/accessories/products/stainless-steel-black-mesh-bracelet?variant=12594184912949','/accessories/products/sand-grey-suede-italian-leather-strap?variant=12462357807157'],
-        '/mens-watches/products/ascari-indigo-rose-gold-rubber?variant=22619762327637': ['/accessories/products/stainless-steel-rose-gold-mesh-bracelet?variant=31884126715989','/accessories/products/blue-italian-leather-strap-with-alligator-pattern-florence?variant=21261995933781','/accessories/products/essence-blue-leather-strap-1'],
-        '/mens-watches/products/odyssey-steel-link?variant=31699896500309': ['/accessories/products/https-yourstore-myshopify-com-products-classic-grey-italian-leather-strap','/accessories/products/black-italian-leather-strap-with-alligator-pattern','/accessories/products/https-yourstore-myshopify-com-products-grey-italian-leather-strap-with-alligator-pattern-florence'],
-        '/mens-watches/products/ascari-grand-prix-gp-1952?variant=31516824928341': ['/accessories/products/stainless-steel-rose-gold-mesh-bracelet?variant=31884126715989','/accessories/products/brown-oily-italian-leather-strap','/accessories/products/black-italian-leather-strap-with-alligator-pattern'],
-        '/mens-watches/products/venice-moonphase-black-gold-mesh?variant=7759681454133': ['/accessories/products/stainless-steel-gold-mesh-bracelet','/accessories/products/black-italian-leather-strap-with-alligator-pattern?variant=21261993017429','/accessories/products/black-vintage-italian-leather-strap?variant=22185251962965'],
-        '/mens-watches/products/ascari-tuscany-rubber?variant=22619920990293': ['/accessories/products/stainless-steel-mesh-bracelet?variant=12594134417461','/accessories/products/classic-black-italian-leather-strap','/accessories/products/black-italian-leather-strap-with-alligator-pattern-florence?variant=22185728016469'],
-        '/mens-watches/products/venice-moonphase-silver-mesh?variant=7759541862453': ['/accessories/products/black-vintage-italian-leather-strap','/accessories/products/classic-brown-italian-leather-strap?variant=21625681707093','/accessories/products/burgundy-italian-leather-strap-with-alligator-pattern']
+        '/mens-watches/products/ascari-two-tone-gold-steel-link?variant=22619994882133': ['/products/brown-italian-leather-strap', '/collections/accessories/products/blue-alligator-python-pattern-leather-strap?variant=31700606517333', '/products/https-yourstore-myshopify-com-products-light-suede-italian-leather-strap'],
+        '/mens-watches/products/okeanos-green-steel-link?variant=22077049045077': ['/products/brown-italian-leather-strap','/products/https-yourstore-myshopify-com-products-light-suede-italian-leather-strap', '/products/blue-italian-leather-strap-with-alligator-pattern'],
+        '/mens-watches/products/ascari-black-steel-link?variant=22235605827669': ['/products/brown-italian-leather-strap', '/collections/accessories/products/blue-alligator-python-pattern-leather-strap?variant=31700606517333','/products/https-yourstore-myshopify-com-products-light-suede-italian-leather-strap'],
+        '/mens-watches/products/ascari-indigo-rose-gold-rubber?variant=22619762327637': ['/products/brown-italian-leather-strap', '/products/blue-italian-leather-strap-with-alligator-pattern', '/products/https-yourstore-myshopify-com-products-light-suede-italian-leather-strap'],
+        '/mens-watches/products/odyssey-steel-link?variant=31699896500309': ['/products/brown-italian-leather-strap', '/collections/accessories/products/blue-alligator-python-pattern-leather-strap?variant=31700606517333', '/products/https-yourstore-myshopify-com-products-light-suede-italian-leather-strap'],
+        '/mens-watches/products/ascari-grand-prix-gp-1952?variant=31516824928341': ['/products/https-yourstore-myshopify-com-products-light-suede-italian-leather-strap', '/collections/accessories/products/blue-alligator-python-pattern-leather-strap?variant=31700606517333', '/products/brown-italian-leather-strap'],
+        '/mens-watches/products/venice-moonphase-black-gold-mesh?variant=7759681454133': ['/products/https-yourstore-myshopify-com-products-light-suede-italian-leather-strap', '/collections/accessories/products/blue-alligator-python-pattern-leather-strap?variant=31700606517333', '/products/brown-italian-leather-strap'],
+        '/mens-watches/products/ascari-tuscany-rubber?variant=22619920990293': ['/products/https-yourstore-myshopify-com-products-light-suede-italian-leather-strap', '/products/burgundy-italian-leather-strap-with-alligator-pattern', '/products/brown-italian-leather-strap'],
+        '/mens-watches/products/venice-moonphase-silver-mesh?variant=7759541862453': ['/products/https-yourstore-myshopify-com-products-light-suede-italian-leather-strap', '/products/burgundy-italian-leather-strap-with-alligator-pattern', '/products/brown-italian-leather-strap']
     };
 
+
+
     let static_data = {
-        '/accessories/products/brown-italian-leather-strap-with-alligator-pattern-florence?variant=21261996589141': {price:'59.0', title:'Brown Italian Leather Strap With Alligator Pattern Florence', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/Strap_Leather028_1200x1920px_G_180x.jpg?v=1569103309'},
-        '/accessories/products/stainless-steel-black-mesh-bracelet?variant=12594184912949': {price:'69.0', title:'Stainless Steel Milanese Black Mesh Bracelet', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/MeshStrap_Front_Black_Comp_001_180x.jpg?v=1569123954'},
-        '/accessories/products/black-vintage-italian-leather-strap': {price:'59.0', title:'Black Vintage Italian Leather Strap', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/Strap_Leather013_1200x1920px_S_180x.jpg?v=1569158401'},
-
-        '/accessories/products/stainless-steel-mesh-bracelet?variant=12594134417461': {price:'69.0', title:'Stainless Steel Milanese Mesh Bracelet', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/MeshStrap_Front_Silver_Comp_001_180x.jpg?v=1569123953'},
-        '/accessories/products/light-grey-vintage-italian-leather-strap': {price:'59.0', title:'Light Grey Vintage Italian Leather Strap', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/Strap_Leather015_1200x1920px_G_180x.jpg?v=1569075907'},
-        '/accessories/products/https-yourstore-myshopify-com-products-green-italian-leather-strap': {price:'59.0', title:'Green Italian Leather Strap', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/Strap_Leather012_1200x1920px_G_180x.jpg?v=1569075913'},
-
-        '/accessories/products/black-vintage-italian-leather-strap?variant=22185251962965': {price:'59.0', title:'Black Vintage Italian Leather Strap', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/Strap_Leather013_1200x1920px_S_180x.jpg?v=1569158401'},
-        '/accessories/products/sand-grey-suede-italian-leather-strap?variant=12462357807157': {price:'59.0', title:'Sand Grey Suede Italian Leather Strap', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/Strap_Leather022_1200x1920px_G_180x.jpg?v=1569075907'},
-
-        '/accessories/products/stainless-steel-rose-gold-mesh-bracelet?variant=31884126715989': {price:'89.0', title:'Stainless Steel Milanese Rose Gold Mesh Bracelet', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/MeshStrap_Front_RoseGold_Comp_001_180x.jpg?v=1569123954'},
-        '/accessories/products/blue-italian-leather-strap-with-alligator-pattern-florence?variant=21261995933781': {price:'44.0', title:'Blue Italian Leather Strap With Alligator Pattern Florence', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/Strap_Leather023_1200x1920px_B_180x.jpg?v=1569103309'},
-        '/accessories/products/essence-blue-leather-strap-1': {price:'59.0', title:'Essence Blue Leather Strap', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/LeatherSeamlessStrap_18mm_Front_Leather_Blue_RG_180x.jpg?v=1569157892'},
-
-        '/accessories/products/https-yourstore-myshopify-com-products-classic-grey-italian-leather-strap': {price:'59.0', title:'Classic Grey Italian Leather Strap', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/Strap_Leather006_1200x1920px_S_180x.jpg?v=1569075914'},
-        '/accessories/products/black-italian-leather-strap-with-alligator-pattern': {price:'59.0', title:'Black Italian Leather Strap With Alligator Pattern', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/Strap_Leather021_1200x1920px_RG_180x.jpg?v=1569144451'},
-        '/accessories/products/https-yourstore-myshopify-com-products-grey-italian-leather-strap-with-alligator-pattern-florence': {price:'44.0', title:'Grey Italian Leather Strap With Alligator Pattern Florence', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/Strap_Leather024_1200x1920px_S_180x.jpg?v=1569075914'},
-
-        '/accessories/products/brown-oily-italian-leather-strap': {price:'59.0', title:'Brown Oily Italian Leather Strap', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/Strap_Leather004_1200x1920px_B_180x.jpg?v=1569181935'},
-        '/accessories/products/stainless-steel-gold-mesh-bracelet': {price:'69.0', title:'Stainless Steel Milanese Gold Mesh Bracelet', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/MeshStrap_Front_Gold_Comp_001_180x.jpg?v=1569123953'},
-        '/accessories/products/black-italian-leather-strap-with-alligator-pattern?variant=21261993017429': {price:'59.0', title:'Black Italian Leather Strap With Alligator Pattern', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/Strap_Leather021_1200x1920px_RG_180x.jpg?v=1569144451'},
-
-        '/accessories/products/classic-black-italian-leather-strap': {price:'44.0', title:'Classic Black Italian Leather Strap', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/Strap_Leather016_1200x1920px_S_180x.jpg?v=1569158404'},
-        '/accessories/products/black-italian-leather-strap-with-alligator-pattern-florence?variant=22185728016469': {price:'44.0', title:'Black Italian Leather Strap With Alligator Pattern Florence', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/Strap_Leather025_1200x1920px_G_180x.jpg?v=1569158419'},
-        '/accessories/products/classic-brown-italian-leather-strap?variant=21625681707093': {price:'59.0', title:'Classic Brown Italian Leather Strap', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/fv3H1HsJTuiKzVYqJvBU_Strap_Leather002_1200x1920px_G_180x.jpg?v=1569126793'},
-        '/accessories/products/burgundy-italian-leather-strap-with-alligator-pattern': {price:'95.0', title:'Burgundy Italian Leather Strap With Alligator Pattern', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/Strap_Leather030_1200x1920px_B_180x.jpg?v=1569103309'}
+        '/products/brown-italian-leather-strap': {price:'44.0', title:'Brown Italian Leather Strap', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/Strap_Leather008_1200x1920px_RG_180x.jpg?v=1569141784', product: {'Size': 'M', 'Pin color': 'Rose Gold','id': '21261996359765'}},
+        '/collections/accessories/products/blue-alligator-python-pattern-leather-strap?variant=31700606517333': {price:'44.0', title:'Blue Alligator Python Pattern Leather Strap', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/Strap_BluePython_Gold_180x.jpg?v=1579700848', product: {'Color': 'Gold', 'id': '31700606517333'}},
+        '/products/https-yourstore-myshopify-com-products-light-suede-italian-leather-strap': {price:'59.0', title:'Light Suede Italian Leather Strap', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/Strap_Leather014_1200x1920px_G_180x.jpg?v=1569075906', product: {'Size': 'M', 'Pin color': 'Gold', 'id': '12462356135989'}},
+        '/products/blue-italian-leather-strap-with-alligator-pattern': {price:'59.0', title:'Blue Italian Leather Strap With Alligator Pattern', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/Strap_Leather009_1200x1920px_S_180x.jpg?v=1569103308', product: {'Size': 'M', 'Pin color': 'Silver', 'id': '21261993377877'}},
+        '/products/burgundy-italian-leather-strap-with-alligator-pattern?variant=22185537634389': {price:'95.0', title:'Burgundy Italian Leather Strap With Alligator Pattern', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/Strap_Leather030_1200x1920px_B_180x.jpg?v=1569103309', product: {'Size': 'M', 'Pin color': 'Black', 'id': '22185537634389'}}
     };
 
     let findCollectionByHref = function(href) {
@@ -63,7 +44,7 @@ $(function () {
                         'eventLabel': 'product'
                     });
                 }
-            }).attr('href','/collections'+href).append(
+            }).attr('href', href).append(
                 $('<img class="cart-popup__carousel_slide_image">').attr('src', page.img)
             ).append(
                 $('<div class="cart-popup__carousel_slide_title"></div>').html(page.title)
@@ -72,6 +53,10 @@ $(function () {
             ).append(
                 $('<div class="cart-popup__carousel_slide_add_button">Add</div>').click(function (e) {
                     e.stopImmediatePropagation();
+                    let product_data = page.product;
+                    product_data.form_type = 'product';
+                    product_data.utf8 = '✓';
+                    addProduct(product_data);
                     return false;
                 })
             )
