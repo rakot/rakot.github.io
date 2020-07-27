@@ -88,7 +88,7 @@ $(function () {
         });
 
         if(collection.length) {
-            $('.grid--full.cart-subtotal').after('<div class="carousel-wrapper"><h4>You may also like:</h4><div class="show-more-button">Show More</div><div class="carousel-wrapper-content"></div></div>');
+            $('.grid--full.cart-subtotal').after('<div class="carousel-wrapper"><h4>Add a second strap:</h4><div class="show-more-button">Show More</div><div class="carousel-wrapper-content"></div></div>');
             let slickContainer = $('.drawer__cart .carousel-wrapper-content');
             collection.forEach(function (item) {
                 slickContainer.append(buildItemFromPage(static_data[item], item));
