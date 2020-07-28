@@ -22,6 +22,16 @@ $(function () {
         '/products/burgundy-italian-leather-strap-with-alligator-pattern': {price:'95.0', title:'Burgundy Italian Leather Strap With Alligator Pattern', img:'https://cdn.shopify.com/s/files/1/0020/1896/7605/products/Strap_Leather030_1200x1920px_B_180x.jpg?v=1569103309', product: {'Size': 'M', 'Pin color': 'Black', 'id': '22185537634389'}}
     };
 
+
+    window.hj=window.hj||function(){(hj.q=hj.q||[]).push(arguments)};
+    hj('trigger', 'slide-in_cart');
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+        'event': 'event-to-ga',
+        'eventCategory': 'Exp - Slide-In Cart',
+        'eventAction': 'loaded'
+    });
+
     let findCollectionByHref = function(href) {
         for(var i in top_sellers) {
             if(i.indexOf(href) !== -1) {
@@ -107,14 +117,6 @@ $(function () {
             let slickPoller = setInterval(function () {
                 if(slickContainer.is(':visible')) {
                     clearInterval(slickPoller);
-                    window.hj=window.hj||function(){(hj.q=hj.q||[]).push(arguments)};
-                    hj('trigger', 'slide-in_cart');
-                    window.dataLayer = window.dataLayer || [];
-                    dataLayer.push({
-                        'event': 'event-to-ga',
-                        'eventCategory': 'Exp - Slide-In Cart',
-                        'eventAction': 'loaded'
-                    });
                     slickContainer.slick({
                         infinite: true,
                         slidesToShow: 2,
