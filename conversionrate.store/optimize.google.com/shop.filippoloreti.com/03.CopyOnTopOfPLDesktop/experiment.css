@@ -1,0 +1,6 @@
+#CollectionSection .section-header {margin-bottom: 20px;}
+#CollectionSection .section-header-view-more {text-align: center; position: relative;}
+#CollectionSection .section-header-view-more-normal {display: none;}
+#CollectionSection .section-header-view-more-wrapper {text-align: center; padding: 17px 25px; border: 1px solid #EAE7E4; box-sizing: border-box; border-radius: 5px; font-style: normal; font-weight: normal;font-size: 14px;line-height: 140%;letter-spacing: 0.025em;color: #393939;}
+#CollectionSection .section-header-view-more-button {font-style: normal; display: inline-block; position: relative; top: -15px; font-weight: 500;font-size: 14px;line-height: 17px;text-align: center;letter-spacing: 0.025em;color: #000000; background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAQAAABQ+cdNAAAAM0lEQVR42mNgWMAQz4AMEhjmg4j/SMJwXj3DewYDsJABw3uGepg8RBhFCCaMJgQRhgsBACQ+D81MNZTRAAAAAElFTkSuQmCC) center right 8px no-repeat; padding: 5px 25px 5px 15px; cursor: pointer;}
+#CollectionSection .section-header-view-more-button.active {background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAA8SURBVHgBhc3RCQAgCEVRR2qjGsVNasNGKIMXGJo+uF8ekMiOUbgDJuIMFeRije4MbtKSqvPluY0P0rhv+NIP1WAUNDUAAAAASUVORK5CYII=) center right 8px no-repeat;}
