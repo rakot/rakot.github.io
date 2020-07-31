@@ -9,7 +9,10 @@ $(function () {
     });
 
     $('#CollectionSection .section-header').after('<div class="section-header-view-more">' +
-        '<div class="section-header-view-more-wrapper">' +
+        '<div class="section-header-view-more-wrapper section-header-view-more-state-collapsed">' +
+        '<div class="section-header-view-more-collapsed-mobile">' +
+        '<p style="margin: 0;">Want to own a luxury watch without paying the high price tag? On average, a luxury watch is sold at a price from 8 to 16 times higher...</p>' +
+        '</div>' +
         '<div class="section-header-view-more-collapsed">' +
         '<p style="margin: 0;">Want to own a luxury watch without paying the high price tag? On average, a luxury watch is sold at a price from 8 to 16 times higher than it costs to make it. These markups cover the costs for wholesalers, distributors, retailers, and expensive advertising campaigns. We started Filippo Loreti...</p>' +
         '</div>' +
@@ -42,12 +45,16 @@ $(function () {
 
         if(button.hasClass('active')) {
             button.removeClass('active').text('View less');
-            $('.section-header-view-more-normal').hide();
-            $('.section-header-view-more-collapsed').show();
+            $('.section-header-view-more-wrapper')
+                .addClass('section-header-view-more-state-normal')
+                .removeClass('section-header-view-more-state-collapsed')
+            ;
         } else {
             button.addClass('active').text('View more');
-            $('.section-header-view-more-normal').show();
-            $('.section-header-view-more-collapsed').hide();
+            $('.section-header-view-more-wrapper')
+                .removeClass('section-header-view-more-state-normal')
+                .addClass('section-header-view-more-state-collapsed')
+            ;
         }
     });
 });
