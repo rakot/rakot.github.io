@@ -44,13 +44,13 @@ $(function () {
         });
 
         if(button.hasClass('active')) {
-            button.removeClass('active').text('View less');
+            button.removeClass('active').text('Read more');
             $('.section-header-view-more-wrapper')
                 .removeClass('section-header-view-more-state-normal')
                 .addClass('section-header-view-more-state-collapsed')
             ;
         } else {
-            button.addClass('active').text('Read more');
+            button.addClass('active').text('View less');
             $('.section-header-view-more-wrapper')
                 .addClass('section-header-view-more-state-normal')
                 .removeClass('section-header-view-more-state-collapsed')
