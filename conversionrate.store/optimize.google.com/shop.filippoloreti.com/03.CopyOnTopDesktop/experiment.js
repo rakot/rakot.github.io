@@ -10,7 +10,7 @@ $(function () {
 
     $('#CollectionSection .section-header').after('<div class="section-header-view-more">' +
         '<div class="section-header-view-more-wrapper section-header-view-more-state-collapsed">' +
-        '<div class="section-header-view-more-collapsed-mobile">' +
+        '<div class=" ">' +
         '<p style="margin: 0;">Want to own a luxury watch without paying the high price tag? On average, a luxury watch is sold at a price from 8 to 16 times higher...</p>' +
         '</div>' +
         '<div class="section-header-view-more-collapsed">' +
@@ -46,14 +46,14 @@ $(function () {
         if(button.hasClass('active')) {
             button.removeClass('active').text('View less');
             $('.section-header-view-more-wrapper')
-                .addClass('section-header-view-more-state-normal')
-                .removeClass('section-header-view-more-state-collapsed')
-            ;
-        } else {
-            button.addClass('active').text('View more');
-            $('.section-header-view-more-wrapper')
                 .removeClass('section-header-view-more-state-normal')
                 .addClass('section-header-view-more-state-collapsed')
+            ;
+        } else {
+            button.addClass('active').text('Read more');
+            $('.section-header-view-more-wrapper')
+                .addClass('section-header-view-more-state-normal')
+                .removeClass('section-header-view-more-state-collapsed')
             ;
         }
     });
