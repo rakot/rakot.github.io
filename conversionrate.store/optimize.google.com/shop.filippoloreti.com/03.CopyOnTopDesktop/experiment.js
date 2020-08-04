@@ -10,7 +10,7 @@ $(function () {
 
     $('#CollectionSection .section-header').after('<div class="section-header-view-more">' +
         '<div class="section-header-view-more-wrapper section-header-view-more-state-collapsed">' +
-        '<div class=" ">' +
+        '<div class="section-header-view-more-collapsed-mobile">' +
         '<p style="margin: 0;">Want to own a luxury watch without paying the high price tag? On average, a luxury watch is sold at a price from 8 to 16 times higher...</p>' +
         '</div>' +
         '<div class="section-header-view-more-collapsed">' +
