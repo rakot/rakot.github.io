@@ -17,7 +17,7 @@ $(function () {
         '<p style="margin: 0;">Want to own a luxury watch without paying the high price tag? On average, a luxury watch is sold at a price from 8 to 16 times higher than it costs to make it. These markups cover the costs for wholesalers, distributors, retailers, and expensive advertising campaigns. We started Filippo Loreti...</p>' +
         '</div>' +
         '<div class="section-header-view-more-normal">' +
-        '<p>Want to own a luxury watch without paying the high price tag?On average, a luxury watch is sold at a price from 8 to 16 times higher than it costs to make it. These markups cover the costs for wholesalers, distributors, retailers, and expensive advertising campaigns.  <br> We started Filippo Loreti because like lots of guys out there we were frustrated with steep and unjustified prices of high-quality watches.</p>' +
+        '<p>Want to own a luxury watch without paying the high price tag? On average, a luxury watch is sold at a price from 8 to 16 times higher than it costs to make it. These markups cover the costs for wholesalers, distributors, retailers, and expensive advertising campaigns.  <br> We started Filippo Loreti because like lots of guys out there we were frustrated with steep and unjustified prices of high-quality watches.</p>' +
         '<p style="margin: 0;">We do things differently. By using a disruptive, direct-to-consumer model we cut out distributors, wholesalers, and retail stores.  This way, by avoiding all the middlemen we can offer you a limited edition luxury watch for less than $200.</p>'+
         '</div>' +
         '</div>' +
