@@ -653,14 +653,6 @@ $(function () {
         ]
     });
 
-    $('.home-reviews-list .arrow').click(function () {
-        window.dataLayer = window.dataLayer || [];
-        dataLayer.push({
-            'event': 'event-to-ga',
-            'eventCategory': 'Exp - Trust on PDP',
-            'eventAction': 'swipe articles in the Press section'
-        });
-    });
     $('.home-reviews-list').on('swipe', function () {
         window.dataLayer = window.dataLayer || [];
         dataLayer.push({
