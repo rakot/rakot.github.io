@@ -224,7 +224,6 @@ $(function () {
         });
     });
 
-    $('.product-section-reviews').remove();
     $('#shopify-section-hp-public').after('<div id="shopify-section-hp-reviews" class="shopify-section">\n' +
         '        <section class="section-reviews">\n' +
         '            <div class="section-inner">\n' +
@@ -626,7 +625,7 @@ $(function () {
         '        </section>\n' +
         '    \n' +
         '</div>');
-    jQuery('.home-reviews-list').slick({
+    jQuery('#shopify-section-hp-reviews .home-reviews-list').slick({
         rows: 2,
         dots: true,
         infinite: true,
@@ -653,7 +652,7 @@ $(function () {
         ]
     });
 
-    $('.home-reviews-list').on('swipe', function () {
+    $('#shopify-section-hp-reviews .home-reviews-list').on('swipe', function () {
         window.dataLayer = window.dataLayer || [];
         dataLayer.push({
             'event': 'event-to-ga',
