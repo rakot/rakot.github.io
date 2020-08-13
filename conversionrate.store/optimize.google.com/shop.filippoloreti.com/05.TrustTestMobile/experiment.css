@@ -1,0 +1,522 @@
+.product-icons-wrapper {
+    border: 1px solid #EBC569;
+}
+
+.product-icons-wrapper h4 {
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 144.7%;
+    text-align: center;
+    letter-spacing: 0.125em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+
+section.section-public {
+    padding-top: 40px;
+    padding-bottom: 0;
+}
+
+@media (max-width: 992px) {
+    section.section-public .section-inner {
+        padding:0 32px
+    }
+}
+
+section.section-public .home-public-heading {
+    margin-bottom: 75px;
+    text-align: center
+}
+
+section.section-public .home-public-heading h2 {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #000000;
+    display: inline-block;
+    max-width: 384px;
+    margin-bottom: 0
+}
+
+@media (max-width: 992px) {
+    section.section-public .home-public-heading h2 {
+        line-height:32px
+    }
+}
+
+section.section-public .home-public-list-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative
+}
+
+@media (max-width: 992px) {
+    section.section-public .home-public-list-wrap {
+        display:block
+    }
+}
+
+section.section-public .home-public-list-wrap .home-public-list {
+    position: initial
+}
+
+@media (max-width: 992px) {
+    section.section-public .home-public-list-wrap .home-public-list {
+        position:relative
+    }
+}
+
+section.section-public .home-public-list-wrap .home-public-list .home-public-item {
+    max-width: 384px;
+    padding: 28px 24px 22px;
+    background: #FAFAFA;
+    border-radius: 4px;
+    margin: 10px 16px;
+    width: 100%;
+    outline: none !important
+}
+
+@media (max-width: 992px) {
+    section.section-public .home-public-list-wrap .home-public-list .home-public-item {
+        max-width:calc(100vw - 64px);
+        margin: 0;
+        margin-right: 64px
+    }
+}
+
+section.section-public .home-public-list-wrap .home-public-list .home-public-item.slick-current {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2)
+}
+
+section.section-public .home-public-list-wrap .home-public-list .home-public-item-quote {
+    margin-bottom: 15px
+}
+
+section.section-public .home-public-list-wrap .home-public-list .home-public-item-text {
+    margin-bottom: 16px;
+    height: 120px;
+    overflow: hidden
+}
+
+section.section-public .home-public-list-wrap .home-public-list .home-public-item-text p {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #6E6E6E;
+    margin-bottom: 0;
+    letter-spacing: 0
+}
+
+section.section-public .home-public-list-wrap .home-public-list .home-public-item-image {
+    margin-bottom: 16px
+}
+
+section.section-public .home-public-list-wrap .home-public-list .home-public-item-image .image-placeholder {
+    height: 64px;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left
+}
+
+@media (max-width: 992px) {
+    section.section-public .home-public-list-wrap .home-public-list .home-public-item-name {
+        margin-bottom:24px;
+        padding-bottom: 10px
+    }
+}
+
+section.section-public .home-public-list-wrap .home-public-list .home-public-item-name p {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 0
+}
+
+section.section-public .home-public-list-wrap .home-public-list .slick-arrow {
+    position: absolute;
+    right: 0;
+    top: -55px;
+    z-index: 2;
+    cursor: pointer
+}
+
+section.section-public .home-public-list-wrap .home-public-list .slick-arrow.left {
+    right: 34px
+}
+
+section.section-public .home-public-list-wrap .home-public-list .slick-arrow svg {
+    display: block
+}
+
+@media (max-width: 992px) {
+    section.section-public .home-public-list-wrap .home-public-list .slick-arrow {
+        right:24px;
+        top: 24px
+    }
+
+    section.section-public .home-public-list-wrap .home-public-list .slick-arrow.left {
+        right: 50px
+    }
+}
+
+section.section-public .home-public-list-wrap .home-public-list .slick-dots {
+    bottom: 20px;
+    z-index: 2;
+    text-align: left;
+    padding-left: 24px
+}
+
+section.section-public .home-public-list-wrap .home-public-list .slick-dots li {
+    width: 8px;
+    height: 8px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    margin: 0 4px
+}
+
+section.section-public .home-public-list-wrap .home-public-list .slick-dots li.slick-active {
+    background: #000
+}
+
+section.section-public .home-public-list-wrap .home-public-list .slick-dots li button {
+    display: none
+}
+
+/* Reviews */
+
+section.section-reviews {
+    padding-top: 100px;
+    overflow: hidden;
+    padding-bottom: 50px
+}
+
+@media (max-width: 992px) {
+    section.section-reviews {
+        padding-top:50px
+    }
+}
+
+section.section-reviews .section-inner {
+    position: relative
+}
+
+section.section-reviews .home-reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+section.section-reviews .home-reviews .home-reviews-main {
+    min-width: 384px;
+    text-align: center;
+    margin-right: 136px
+}
+
+section.section-reviews .home-reviews .home-reviews-main .home-reviews-main-up-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px
+}
+
+section.section-reviews .home-reviews .home-reviews-main .home-reviews-main-up-heading svg {
+    margin-right: 4px
+}
+
+section.section-reviews .home-reviews .home-reviews-main .home-reviews-main-up-heading p {
+    margin-left: 8px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #6E6E6E;
+    margin-bottom: 0
+}
+
+section.section-reviews .home-reviews .home-reviews-main .home-reviews-main-heading {
+    margin-bottom: 30px
+}
+
+section.section-reviews .home-reviews .home-reviews-main .home-reviews-main-heading h2 {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 0
+}
+
+section.section-reviews .home-reviews .home-reviews-main .home-reviews-main-text {
+    margin-bottom: 24px;
+    display: none
+}
+
+section.section-reviews .home-reviews .home-reviews-main .home-reviews-main-text p {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #6E6E6E;
+    margin-bottom: 0;
+    letter-spacing: 0
+}
+
+section.section-reviews .home-reviews .home-reviews-main .home-reviews-main-link a {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+    color: #5472C7
+}
+
+section.section-reviews .home-reviews .home-reviews-list {
+    margin-bottom: 0;
+    position: inherit
+}
+
+section.section-reviews .home-reviews .home-reviews-list .arrow {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid #000;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer
+}
+
+section.section-reviews .home-reviews .home-reviews-list .arrow.left {
+    left: 445px
+}
+
+section.section-reviews .home-reviews .home-reviews-list .arrow.right {
+    right: -50px
+}
+
+section.section-reviews .home-reviews .home-reviews-list .slick-slide>div:last-child .home-reviews-item {
+    margin-bottom: 0
+}
+
+section.section-reviews .home-reviews .home-reviews-list .home-reviews-item {
+    max-width: 280px;
+    background: #FAFAFA;
+    border-radius: 2px;
+    padding: 16px;
+    margin-right: 32px;
+    margin-bottom: 16px
+}
+
+section.section-reviews .home-reviews .home-reviews-list .home-reviews-item .home-reviews-item-stars {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 8px
+}
+
+section.section-reviews .home-reviews .home-reviews-list .home-reviews-item .home-reviews-item-stars svg {
+    margin-right: 2px
+}
+
+section.section-reviews .home-reviews .home-reviews-list .home-reviews-item .home-reviews-item-heading {
+    margin-bottom: 8px
+}
+
+section.section-reviews .home-reviews .home-reviews-list .home-reviews-item .home-reviews-item-heading h3 {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+    margin-bottom: 0
+}
+
+section.section-reviews .home-reviews .home-reviews-list .home-reviews-item .home-reviews-item-text {
+    margin-bottom: 8px;
+    min-height: 72px
+}
+
+section.section-reviews .home-reviews .home-reviews-list .home-reviews-item .home-reviews-item-text p {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #8E8E8E;
+    margin-bottom: 0
+}
+
+section.section-reviews .home-reviews .home-reviews-list .home-reviews-item .home-reviews-item-link a {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+    color: #5472C7
+}
+
+@media (max-width: 991px) {
+    section.section-reviews .home-reviews .home-reviews-main {
+        min-width: auto;
+        text-align: center;
+        margin: 0 auto 28px;
+        max-width: 384px;
+    }
+
+    section.section-reviews .home-reviews {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+
+@media (max-width: 400px) {
+    section.section-instagram .home-instagram-wrap .home-instagram-item-join a {
+        width: 100%;
+        padding: 9px 45px
+    }
+
+    section.section-reviews .home-reviews .home-reviews-list .home-reviews-item .home-reviews-item-heading {
+        margin-bottom: 2px
+    }
+
+    section.section-reviews .home-reviews .home-reviews-list .home-reviews-item .home-reviews-item-text p {
+        line-height: 25px
+    }
+
+    .home-reviews-item-link {
+        position: absolute;
+        background: #FAFAFA;
+        bottom: 16px;
+        right: 0;
+        width: 76%;
+        padding-left: 20px
+    }
+
+    section.section-reviews .home-reviews .home-reviews-list ul.slick-dots {
+        bottom: -26px;
+        margin-left: -33px
+    }
+
+    section.section-seo-text .home-seo-text {
+        padding: 24px 40px;
+        max-width: 307px
+    }
+
+    section.section-seo-text .home-seo-text p {
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        color: #4B4B4B;
+        letter-spacing: 0;
+        margin-bottom: 0
+    }
+
+    .home-reviews-item-link:before {
+        content: '...';
+        position: absolute;
+        left: 1px;
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 25px;
+        color: #8E8E8E;
+        margin-bottom: 0;
+        bottom: 0
+    }
+
+    section.section-benefits {
+        padding-top: 43px;
+        padding-bottom: 22px
+    }
+
+    section.section-reviews .home-reviews .home-reviews-main .home-reviews-main-up-heading svg {
+        width: 8px;
+        height: 8px
+    }
+
+    section.section-benefits .home-benefits-heading h2 {
+        letter-spacing: 3px
+    }
+
+    section.section-benefits .home-benefits .home-benefit .home-benefit-heading h3 {
+        font-size: 18px
+    }
+
+    section.section-benefits .home-benefits .home-benefit .home-benefit-text p {
+        padding: 0 24px;
+        letter-spacing: 0.3px;
+        line-height: 25px;
+        color: #000
+    }
+
+    section.section-reviews .home-reviews .home-reviews-main .home-reviews-main-up-heading p {
+        letter-spacing: 1px
+    }
+
+    section.section-reviews .home-reviews .home-reviews-main .home-reviews-main-up-heading {
+        margin-bottom: 35px
+    }
+
+    section.section-reviews .home-reviews .home-reviews-main .home-reviews-main-heading h2 br {
+        display: none
+    }
+
+    section.section-reviews .home-reviews .home-reviews-main .home-reviews-main-heading h2 {
+        letter-spacing: 3.2px
+    }
+
+    section.section-reviews .home-reviews .home-reviews-list {
+        padding-left: 18px
+    }
+
+    section.section-reviews .home-reviews .home-reviews-list .home-reviews-item {
+        max-width: 221px
+    }
+
+    section.section-reviews .home-reviews .home-reviews-list .home-reviews-item .home-reviews-item-text {
+        margin-bottom: 0
+    }
+}
