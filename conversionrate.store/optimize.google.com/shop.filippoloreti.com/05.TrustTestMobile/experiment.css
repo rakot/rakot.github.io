@@ -215,6 +215,7 @@ section.section-reviews {
 }
 
 section.section-reviews .section-inner {
+    padding: 0 15px;
     position: relative
 }
 
