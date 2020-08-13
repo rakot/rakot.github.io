@@ -1,5 +1,21 @@
 $(function () {
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1885763,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     window.hj=window.hj||function(){(hj.q=hj.q||[]).push(arguments)};
+    hj('trigger', 'trust_pdp');
+
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+        'event': 'event-to-ga',
+        'eventCategory': 'Exp - Trust on PDP',
+        'eventAction': 'loaded'
+    });
 
     $('.product-icons-wrapper').prepend('<h4>100% No-risk Money <br> Back Guarantee</h4>')
 
@@ -190,6 +206,22 @@ $(function () {
                 }
             }
         ]
+    });
+    $('.home-public-list .arrow').click(function () {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'event': 'event-to-ga',
+            'eventCategory': 'Exp - Trust on PDP',
+            'eventAction': 'click on arrows to switch articles in the Press section'
+        });
+    });
+    $('.home-public-list').on('swipe', function () {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'event': 'event-to-ga',
+            'eventCategory': 'Exp - Trust on PDP',
+            'eventAction': 'swipe articles in the Press section'
+        });
     });
 
     $('.product-section-reviews').remove();
@@ -619,5 +651,31 @@ $(function () {
                 }
             }
         ]
+    });
+
+    $('.home-reviews-list .arrow').click(function () {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'event': 'event-to-ga',
+            'eventCategory': 'Exp - Trust on PDP',
+            'eventAction': 'swipe articles in the Press section'
+        });
+    });
+    $('.home-reviews-list').on('swipe', function () {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'event': 'event-to-ga',
+            'eventCategory': 'Exp - Trust on PDP',
+            'eventAction': 'swipe reviews'
+        });
+    });
+
+    $('#shopify-section-hp-reviews .home-reviews-main-link a').click(function () {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'event': 'event-to-ga',
+            'eventCategory': 'Exp - Trust on PDP',
+            'eventAction': 'click on Read all reviews'
+        });
     });
 });
