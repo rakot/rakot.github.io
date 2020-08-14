@@ -183,46 +183,50 @@ $(function () {
         '    \n' +
         '</div>');
 
-    $('.home-public-list').slick({
-        rows: 1,
-        dots: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        swipeToSlide: true,
-        touchMove: true,
-        variableWidth: true,
-        touchThreshold: 70,
-        nextArrow: '<div class="arrow right"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4L17 12L9 20" stroke="black"/></svg>\n</div>',
-        prevArrow: '<div class="arrow left"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 20L7 12L15 4" stroke="black"/></svg>\n</div>',
-        responsive: [
-            {
-                breakpoint: 991,
-                settings: {
-                    dots: true,
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    });
-    $('.home-public-list .arrow').click(function () {
-        window.dataLayer = window.dataLayer || [];
-        dataLayer.push({
-            'event': 'event-to-ga',
-            'eventCategory': 'Exp - Trust on PDP',
-            'eventAction': 'click on arrows to switch articles in the Press section'
+    setInterval(function () {
+        $(function () {
+            $('.home-public-list').slick({
+                rows: 1,
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                swipeToSlide: true,
+                touchMove: true,
+                variableWidth: true,
+                touchThreshold: 70,
+                nextArrow: '<div class="arrow right"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4L17 12L9 20" stroke="black"/></svg>\n</div>',
+                prevArrow: '<div class="arrow left"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 20L7 12L15 4" stroke="black"/></svg>\n</div>',
+                responsive: [
+                    {
+                        breakpoint: 991,
+                        settings: {
+                            dots: true,
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+            $('.home-public-list .arrow').click(function () {
+                window.dataLayer = window.dataLayer || [];
+                dataLayer.push({
+                    'event': 'event-to-ga',
+                    'eventCategory': 'Exp - Trust on PDP',
+                    'eventAction': 'click on arrows to switch articles in the Press section'
+                });
+            });
+            $('.home-public-list').on('swipe', function () {
+                window.dataLayer = window.dataLayer || [];
+                dataLayer.push({
+                    'event': 'event-to-ga',
+                    'eventCategory': 'Exp - Trust on PDP',
+                    'eventAction': 'swipe articles in the Press section'
+                });
+            });
         });
-    });
-    $('.home-public-list').on('swipe', function () {
-        window.dataLayer = window.dataLayer || [];
-        dataLayer.push({
-            'event': 'event-to-ga',
-            'eventCategory': 'Exp - Trust on PDP',
-            'eventAction': 'swipe articles in the Press section'
-        });
-    });
+    }, 100);
 
     $('#shopify-section-hp-public').after('<div id="shopify-section-hp-reviews" class="shopify-section">\n' +
         '        <section class="section-reviews">\n' +
@@ -625,48 +629,54 @@ $(function () {
         '        </section>\n' +
         '    \n' +
         '</div>');
-    jQuery('#shopify-section-hp-reviews .home-reviews-list').slick({
-        rows: 2,
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        swipeToSlide: true,
-        touchMove: true,
-        variableWidth: true,
-        touchThreshold: 200,
-        nextArrow: '<div class="arrow right"><svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L9 9L1 17" stroke="black"/></svg></div>',
-        prevArrow: '<div class="arrow left"><svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 17L1 9L9 1" stroke="black"/></svg></div>',
-        responsive: [
-            {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: false,
-                    nextArrow: '',
-                    prevArrow: ''
-                }
-            }
-        ]
-    });
 
-    $('#shopify-section-hp-reviews .home-reviews-list').on('swipe', function () {
-        window.dataLayer = window.dataLayer || [];
-        dataLayer.push({
-            'event': 'event-to-ga',
-            'eventCategory': 'Exp - Trust on PDP',
-            'eventAction': 'swipe reviews'
-        });
-    });
 
-    $('#shopify-section-hp-reviews .home-reviews-main-link a').click(function () {
-        window.dataLayer = window.dataLayer || [];
-        dataLayer.push({
-            'event': 'event-to-ga',
-            'eventCategory': 'Exp - Trust on PDP',
-            'eventAction': 'click on Read all reviews'
+    setTimeout(function () {
+        $(function () {
+            $('#shopify-section-hp-reviews .home-reviews-list').slick({
+                rows: 2,
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                swipeToSlide: true,
+                touchMove: true,
+                variableWidth: true,
+                touchThreshold: 200,
+                nextArrow: '<div class="arrow right"><svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L9 9L1 17" stroke="black"/></svg></div>',
+                prevArrow: '<div class="arrow left"><svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 17L1 9L9 1" stroke="black"/></svg></div>',
+                responsive: [
+                    {
+                        breakpoint: 991,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            arrows: false,
+                            nextArrow: '',
+                            prevArrow: ''
+                        }
+                    }
+                ]
+            });
+
+            $('#shopify-section-hp-reviews .home-reviews-list').on('swipe', function () {
+                window.dataLayer = window.dataLayer || [];
+                dataLayer.push({
+                    'event': 'event-to-ga',
+                    'eventCategory': 'Exp - Trust on PDP',
+                    'eventAction': 'swipe reviews'
+                });
+            });
+
+            $('#shopify-section-hp-reviews .home-reviews-main-link a').click(function () {
+                window.dataLayer = window.dataLayer || [];
+                dataLayer.push({
+                    'event': 'event-to-ga',
+                    'eventCategory': 'Exp - Trust on PDP',
+                    'eventAction': 'click on Read all reviews'
+                });
+            });
         });
-    });
+    }, 100);
 });
