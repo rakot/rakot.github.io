@@ -183,7 +183,7 @@ $(function () {
         '    \n' +
         '</div>');
 
-    setInterval(function () {
+    setTimeout(function () {
         $(function () {
             $('.home-public-list').slick({
                 rows: 1,
