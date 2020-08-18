@@ -405,6 +405,10 @@ section.section-reviews .home-reviews .home-reviews-list .home-reviews-item .hom
         flex-direction: column;
         align-items: flex-start;
     }
+
+    section.section-public .home-public-list-wrap .home-public-list .home-public-item-text {
+        height: auto;
+    }
 }
 
 
