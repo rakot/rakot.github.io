@@ -5,35 +5,39 @@ el.async = true;
 el.addEventListener('load', function() {
     jQuery.noConflict();
     let $ = jQuery;
-    $(function () {
-        let luggage_container = $('app-ancillary-luggage-view > .included-in-fare');
-        luggage_container.find('i.icon-info').remove();
-        let luggage_content = luggage_container.children('div:first');
-        let luggage_contents = luggage_content.contents();
-        let luggage_part1 = $('<div class="luggage-content"></div>');
-        luggage_part1.append(luggage_contents[0]);
-        luggage_part1.append($('<div class="luggage-content-blue-button"></div>').append(luggage_contents[1]));
-        let luggage_part2 = $('<div class="luggage-content"></div>');
-        luggage_part2.append('<div class="luggage-content-not-included-caption">Включено:</div>');
-        luggage_part2.append($('<div class="luggage-content-transparent-button"></div>').append(luggage_contents[3]));
-        luggage_content.html('').append($('<div class="luggage-content-container"></div>').append(luggage_part1).append(luggage_part2));
-
-        luggage_container.after('<div class="luggage-warning-container"><div class="luggage-warning-content"><b>Добавьте багаж с 50% скидкой!</b> На стойке регистрации стоимость будет в 2 раза больше!</div></div>');
-
-        $('app-ancillary-insurance .ancillary-service--header-title.ts-h3').after('<div class="ancillary-service--header-info ts-h4">Мы предлагаем полис от компании ERV - лидера по страховым выплатам туристам, путешествующих заграницу.</div>');
-        $('app-ancillary-insurance .ancillary-service--header-description').prepend('<div class="already-has-insurance-button-container"><div class="already-has-insurance-button">У меня уже есть страховка</div></div>');
-        let ins_button = $('.already-has-insurance-button-container .already-has-insurance-button');
-        ins_button.click(function () {
-            if(ins_button.hasClass('active')) {
-                ins_button.removeClass('active');
-                return false;
-            }
-            $('app-ancillary-insurance-card.selected').click();
-            ins_button.addClass('active');
-        });
+    setInterval(function () {
+        if($('.luggage-content-not-included-caption').length === 0) {
+            let luggage_container = $('app-ancillary-luggage-view > .included-in-fare');
+            luggage_container.find('i.icon-info').remove();
+            let luggage_content = luggage_container.children('div:first');
+            let luggage_contents = luggage_content.contents();
+            let luggage_part1 = $('<div class="luggage-content"></div>');
+            luggage_part1.append(luggage_contents[0]);
+            luggage_part1.append($('<div class="luggage-content-blue-button"></div>').append(luggage_contents[1]));
+            let luggage_part2 = $('<div class="luggage-content"></div>');
+            luggage_part2.append('<div class="luggage-content-not-included-caption">Включено:</div>');
+            luggage_part2.append($('<div class="luggage-content-transparent-button"></div>').append(luggage_contents[3]));
+            luggage_content.html('').append($('<div class="luggage-content-container"></div>').append(luggage_part1).append(luggage_part2));
+            luggage_container.after('<div class="luggage-warning-container"><div class="luggage-warning-content"><b>Добавьте багаж с 50% скидкой!</b> На стойке регистрации стоимость будет в 2 раза больше!</div></div>');
+        }
 
 
-        $('.seatmap-schema-container button.available').hover(function () {
+        if($('.ancillary-service--header-info.ts-h4').length) {
+            $('app-ancillary-insurance .ancillary-service--header-title.ts-h3').after('<div class="ancillary-service--header-info ts-h4">Мы предлагаем полис от компании ERV - лидера по страховым выплатам туристам, путешествующих заграницу.</div>');
+            $('app-ancillary-insurance .ancillary-service--header-description').prepend('<div class="already-has-insurance-button-container"><div class="already-has-insurance-button">У меня уже есть страховка</div></div>');
+            let ins_button = $('.already-has-insurance-button-container .already-has-insurance-button');
+            ins_button.click(function () {
+                if(ins_button.hasClass('active')) {
+                    ins_button.removeClass('active');
+                    return false;
+                }
+                $('app-ancillary-insurance-card.selected').click();
+                ins_button.addClass('active');
+            });
+        }
+
+
+        $('.seatmap-schema-container button.available:not(.experiment-applied)').addClass('experiment-applied').hover(function () {
             let self = $(this);
 
             let width = Math.floor(($('.ancillary-seatmap-view--seatmap-block .mobile-scroll-container').width() - $('.ancillary-seatmap-view--seatmap-block .seatmap-schema-container').width())/2);
@@ -68,7 +72,7 @@ el.addEventListener('load', function() {
         }, function () {
             // $('.ancillary-seatmap-description-about-seat').remove();
         });
-    });
+    }, 100);
 });
 
 document.head.appendChild(el);
