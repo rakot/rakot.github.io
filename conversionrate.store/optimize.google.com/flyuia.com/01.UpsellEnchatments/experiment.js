@@ -22,7 +22,7 @@ el.addEventListener('load', function() {
         }
 
 
-        if($('.ancillary-service--header-info.ts-h4').length === 0) {
+        if($('.already-has-insurance-button-container .already-has-insurance-button').length === 0) {
             $('app-ancillary-insurance .ancillary-service--header-title.ts-h3').after('<div class="ancillary-service--header-info ts-h4">Мы предлагаем полис от компании ERV - лидера по страховым выплатам туристам, путешествующих заграницу.</div>');
             $('app-ancillary-insurance .ancillary-service--header-description').prepend('<div class="already-has-insurance-button-container"><div class="already-has-insurance-button">У меня уже есть страховка</div></div>');
             let ins_button = $('.already-has-insurance-button-container .already-has-insurance-button');
