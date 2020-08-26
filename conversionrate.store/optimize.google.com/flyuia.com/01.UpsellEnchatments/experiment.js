@@ -33,7 +33,7 @@ el.addEventListener('load', function() {
                     ins_button.removeClass('active');
                     return false;
                 }
-                $('app-ancillary-insurance-card.selected').click();
+                $('app-ancillary-insurance-card.selected .ancillary-insurance-card-container').click();
                 ins_button.addClass('active');
             });
         }
