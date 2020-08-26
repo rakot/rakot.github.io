@@ -21,9 +21,11 @@ el.addEventListener('load', function() {
             luggage_container.after('<div class="luggage-warning-container"><div class="luggage-warning-content"><b>Добавьте багаж с 50% скидкой!</b> На стойке регистрации стоимость будет в 2 раза больше!</div></div>');
         }
 
+        if($('.ancillary-service--header-info.ts-h4').length === 0) {
+            $('app-ancillary-insurance .ancillary-service--header-title.ts-h3').after('<div class="ancillary-service--header-info ts-h4">Мы предлагаем полис от компании ERV - лидера по страховым выплатам туристам, путешествующих заграницу.</div>');
+        }
 
         if($('.already-has-insurance-button-container .already-has-insurance-button').length === 0) {
-            $('app-ancillary-insurance .ancillary-service--header-title.ts-h3').after('<div class="ancillary-service--header-info ts-h4">Мы предлагаем полис от компании ERV - лидера по страховым выплатам туристам, путешествующих заграницу.</div>');
             $('app-ancillary-insurance .ancillary-service--header-description').prepend('<div class="already-has-insurance-button-container"><div class="already-has-insurance-button">У меня уже есть страховка</div></div>');
             let ins_button = $('.already-has-insurance-button-container .already-has-insurance-button');
             ins_button.click(function () {
