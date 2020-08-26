@@ -36,6 +36,12 @@ el.addEventListener('load', function() {
                 $('app-ancillary-insurance-card.selected .ancillary-insurance-card-container').click();
                 ins_button.addClass('active');
             });
+
+            $('app-ancillary-insurance-card ul').remove();
+
+            $('app-ancillary-insurance-card:eq(0) .ts-h5').after('<ul><li>Медицинские расходы</li><li>Отмена поездки (болезнь, несчастный случай, смерть)</li><li>Информационная поддержка</li></ul>');
+            $('app-ancillary-insurance-card:eq(1) .ts-h5').after('<ul><li>Медицинские расходы</li><li>Отмена поездки (болезнь, несчастный случай, смерть)</li><li>Информационная поддержка</li><li>Потеря багажа</li></ul>');
+            $('app-ancillary-insurance-card:eq(2) .ts-h5').after('<ul><li>Медицинские расходы</li><li>Отмена поездки (болезнь, несчастный случай, смерть)</li><li>Информационная поддержка</li><li>Потеря багажа</li><li>Страхование пассажиров воздушного транспорта</li><li>Ответственность</li></ul>');
         }
 
 

@@ -23,3 +23,9 @@ app-ancillary-insurance-card.selected .ts-h5 {background-image: url(data:image/p
 app-ancillary-insurance .ancillary-service--header-description {display: flex; justify-content: space-between;}
 app-ancillary-insurance .ancillary-service--header-description .already-has-insurance-button {font-style: normal; cursor: pointer; font-weight: bold; font-size: 12px; line-height: 16px; color: #fff; padding: 8px 10px 5px 30px; background: #006CB7 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAANklEQVR42mNgYPgf8L8eB4xnYGD4n/AfH/Bn+F+PV0H94FGwgWIFg96b/ngVQOMTV3T7MzAAABYk2D1TGzLBAAAAAElFTkSuQmCC) left 8px center no-repeat; border-radius: 3px;}
 app-ancillary-insurance .ancillary-service--header-description .already-has-insurance-button.active {background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAaUlEQVR42o2RSxGAMAwFVwqOigOQgINKQEKkIAUJSHgcYEpbSIbklt2Z/ACNyk5OgGZFkVAOhewLWywYaPEFAw3aa+H4xEWwUmjxI5Rii6sWF1g73Axp8MLdFvbC4aH+CykU7n96705wAmkmtgpSDLC0AAAAAElFTkSuQmCC);}
+
+
+app-ancillary-insurance-card .ancillary-insurance-card-container > .mb-5 {display: none !important;}
+
+app-ancillary-insurance-card ul {margin: 0; padding: 0; list-style: none;}
+app-ancillary-insurance-card li {padding: 0 0 0 20px; margin: 0 0 15px; color: #000000; font-weight: normal; font-size: 12px; line-height: 16px; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAKCAYAAABv7tTEAAAAP0lEQVR4AWMgEQiQqqEBiO+DNJKi4T8Q11OkQQGESbVhP9StCqQ4SQGkCaYRlwZCGiegayCoEV0DsRrzCSkCADZoFmoUtNLVAAAAAElFTkSuQmCC) left top no-repeat;}
