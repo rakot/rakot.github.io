@@ -70,7 +70,7 @@ el.addEventListener('load', function() {
                 $('.ancillary-seatmap-description-price').text(price);
             }, 10);
         }, function () {
-            // $('.ancillary-seatmap-description-about-seat').remove();
+            $('.ancillary-seatmap-description-about-seat').remove();
         });
     }, 100);
 });
