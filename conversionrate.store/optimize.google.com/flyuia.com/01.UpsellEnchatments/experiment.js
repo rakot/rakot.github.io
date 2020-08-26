@@ -37,11 +37,23 @@ el.addEventListener('load', function() {
                 ins_button.addClass('active');
             });
 
+            if($('app-ancillary-insurance-card.selected').length) {
+                $('.already-has-insurance-button-container .already-has-insurance-button').removeClass('active');
+            } else {
+                $('.already-has-insurance-button-container .already-has-insurance-button').addClass('active');
+            }
+
             $('app-ancillary-insurance-card ul').remove();
 
             $('app-ancillary-insurance-card:eq(0) .ts-h5').after('<ul><li>Медицинские расходы</li><li>Отмена поездки (болезнь, несчастный случай, смерть)</li><li>Информационная поддержка</li></ul>');
             $('app-ancillary-insurance-card:eq(1) .ts-h5').after('<ul><li>Медицинские расходы</li><li>Отмена поездки (болезнь, несчастный случай, смерть)</li><li>Информационная поддержка</li><li>Потеря багажа</li></ul>');
             $('app-ancillary-insurance-card:eq(2) .ts-h5').after('<ul><li>Медицинские расходы</li><li>Отмена поездки (болезнь, несчастный случай, смерть)</li><li>Информационная поддержка</li><li>Потеря багажа</li><li>Страхование пассажиров воздушного транспорта</li><li>Ответственность</li></ul>');
+        } else {
+            if($('app-ancillary-insurance-card.selected').length) {
+                $('.already-has-insurance-button-container .already-has-insurance-button').removeClass('active');
+            } else {
+                $('.already-has-insurance-button-container .already-has-insurance-button').addClass('active');
+            }
         }
 
 
