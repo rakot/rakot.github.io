@@ -67,6 +67,8 @@ el.addEventListener('load', function() {
                 width = 130;
             }
 
+
+
             let row = parseInt(self.parent().find('.aisle').text());
             let text = '';
             if(self.prevAll().length === 0 || self.nextAll().length === 0) {
@@ -82,12 +84,27 @@ el.addEventListener('load', function() {
                 text += '<p>Место в передней части самолета <span>(Более быстрая посадка и выход)</span></p>';
             }
             $('.ancillary-seatmap-description-about-seat').remove();
-            if(text !== '') {
-                $('.ancillary-seatmap-view--seatmap-block').append($('<div class="ancillary-seatmap-description-about-seat"></div>').css('width',width+'px').html('<div class="ancillary-seatmap-description-price">&nbsp;</div>'+text));
+            if(text === '') {
+                text += '<p>Сидите вместе. Выбирайте удобные места рядом с близкими.</p>';
+            }
+
+            $('.ancillary-seatmap-view--seatmap-block').append($('<div class="ancillary-seatmap-description-about-seat"></div>').css('width',width+'px').html('<div class="ancillary-seatmap-description-price">&nbsp;</div>'+text));
+
+            let height = Math.floor(($('app-ancillary-seatmap-schema').height() - $('.ancillary-seatmap-description-about-seat').height())/2);
+            if(height > 0) {
+                $('.ancillary-seatmap-description-about-seat').css('top', height.toString()+'px');
             }
             setTimeout(function () {
                 let price = $('div.cdk-overlay-container').text();
-                $('.ancillary-seatmap-description-price').text(price);
+                if(price === '$0.00') {
+                    $('.ancillary-seatmap-description-price').text('Бесплатно. Выбор места входит в ваш тариф');
+                } else {
+                    $('.ancillary-seatmap-description-price').text(price);
+                }
+                let height = Math.floor(($('app-ancillary-seatmap-schema').height() - $('.ancillary-seatmap-description-about-seat').height())/2);
+                if(height > 0) {
+                    $('.ancillary-seatmap-description-about-seat').css('top', height.toString()+'px');
+                }
             }, 10);
         }, function () {
             $('.ancillary-seatmap-description-about-seat').remove();
