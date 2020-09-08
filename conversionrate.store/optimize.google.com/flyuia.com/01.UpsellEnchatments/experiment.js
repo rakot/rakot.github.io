@@ -69,7 +69,7 @@ el.addEventListener('load', function() {
 
 
 
-            let row = parseInt(self.parent().find('.aisle').text());
+            let row = parseInt(self.parent().find('.aisle').first().text());
             let text = '';
             if(self.prevAll().length === 0 || self.nextAll().length === 0) {
                 text += '<p>Место с доступом к окну <span>(Вид на панораму из окна)</span></p>'
