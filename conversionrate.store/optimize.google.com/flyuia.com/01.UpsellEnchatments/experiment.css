@@ -1,5 +1,5 @@
 .ancillary-seatmap-view--seatmap-block {position: relative;}
-.ancillary-seatmap-description-about-seat {position: absolute; padding: 5px; font-weight: 600; font-size: 12px; line-height: 16px; color: #000000; letter-spacing: -0.04em; right: 15px; top: 0; width: 130px; background: #DFEDF5; border: 1px solid #006CB7; box-sizing: border-box; border-radius: 3px; }
+.ancillary-seatmap-description-about-seat {position: absolute; padding: 5px; z-index: 100000; font-weight: 600; font-size: 12px; line-height: 16px; color: #000000; letter-spacing: -0.04em; right: 15px; top: 0; width: 130px; background: #DFEDF5; border: 1px solid #006CB7; box-sizing: border-box; border-radius: 3px; }
 .ancillary-seatmap-description-about-seat p {margin: 14px 0; padding-left: 14px; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAJCAYAAAAGuM1UAAAAM0lEQVR4AWMgARiQorgBiP8DsQMpiutRrCNJMVSwgbBiBKiHaSKsGFPTfkzFhDXFUy28AaVcE42p/LXmAAAAAElFTkSuQmCC) left top no-repeat; }
 .ancillary-seatmap-description-about-seat p span {font-size: 12px; display: block; line-height: 112.68%; color: #999999; font-style: normal; font-weight: normal;}
 .ancillary-seatmap-description-about-seat .ancillary-seatmap-description-price {color: #006CB7; font-weight: bold; text-align: center; margin: 10px 0; font-size: 13px;line-height: 18px;}
