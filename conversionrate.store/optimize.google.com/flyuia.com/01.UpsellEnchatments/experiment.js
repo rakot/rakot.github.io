@@ -86,11 +86,11 @@ el.addEventListener('load', function() {
 
 
             setTimeout(function () {
-                let price = $('div.cdk-overlay-container').text();
+                let price = $.trim($('div.cdk-overlay-container').text());
                 if(price.search(/.*0\.00/) === -1) {
-                    $('.ancillary-seatmap-description-price').text('Бесплатно. Выбор места входит в ваш тариф');
-                } else {
                     $('.ancillary-seatmap-description-price').text(price);
+                } else {
+                    $('.ancillary-seatmap-description-price').text('Бесплатно. Выбор места входит в ваш тариф');
                 }
             }, 10);
         }, function () {
