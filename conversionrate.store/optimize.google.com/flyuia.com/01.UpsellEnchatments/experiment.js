@@ -60,15 +60,6 @@ el.addEventListener('load', function() {
         $('.seatmap-schema-container button.available:not(.experiment-applied)').addClass('experiment-applied').hover(function () {
             let self = $(this);
 
-            let width = Math.floor(($('.ancillary-seatmap-view--seatmap-block .mobile-scroll-container').width() - $('.ancillary-seatmap-view--seatmap-block .seatmap-schema-container').width())/2);
-            if(width > 100) {
-                width = width - 15;
-            } else {
-                width = 130;
-            }
-
-
-
             let row = parseInt(self.parent().find('.aisle').first().text());
             let text = '';
             if(self.prevAll().length === 0 || self.nextAll().length === 0) {
@@ -88,22 +79,18 @@ el.addEventListener('load', function() {
                 text += '<p>Сидите вместе. Выбирайте удобные места рядом с близкими.</p>';
             }
 
-            $('.ancillary-seatmap-view--seatmap-block').append($('<div class="ancillary-seatmap-description-about-seat"></div>').css('width',width+'px').html('<div class="ancillary-seatmap-description-price">&nbsp;</div>'+text));
+            $('body').append($('<div class="ancillary-seatmap-description-about-seat"></div>').html('<div class="ancillary-seatmap-description-about-seat-bird-wrapper"><div class="ancillary-seatmap-description-about-seat-bird"></div></div><div class="ancillary-seatmap-description-price">&nbsp;</div>'+text).css({
+                left: self.offset().left+self.width()+10+'px',
+                top: self.offset().top-50+'px'
+            }));
 
-            let height = Math.floor(($('app-ancillary-seatmap-schema').height() - $('.ancillary-seatmap-description-about-seat').height())/2);
-            if(height > 0) {
-                $('.ancillary-seatmap-description-about-seat').css('top', height.toString()+'px');
-            }
+
             setTimeout(function () {
                 let price = $('div.cdk-overlay-container').text();
                 if(price.search(/[1-9]+/) === -1) {
                     $('.ancillary-seatmap-description-price').text('Бесплатно. Выбор места входит в ваш тариф');
                 } else {
                     $('.ancillary-seatmap-description-price').text(price);
-                }
-                let height = Math.floor(($('app-ancillary-seatmap-schema').height() - $('.ancillary-seatmap-description-about-seat').height())/2);
-                if(height > 0) {
-                    $('.ancillary-seatmap-description-about-seat').css('top', height.toString()+'px');
                 }
             }, 10);
         }, function () {
