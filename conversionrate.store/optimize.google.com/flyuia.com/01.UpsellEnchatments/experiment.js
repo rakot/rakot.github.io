@@ -90,6 +90,17 @@ el.addEventListener('load', function() {
             luggage_container.after('<div class="luggage-warning-container"><div class="luggage-warning-content"><b>'+textData['Добавьте багаж с 50% скидкой!']+'</b> '+textData['На стойке регистрации стоимость будет в 2 раза больше!']+'</div></div>');
             if(add_luggage_checkbox) {
                 $('.luggage-warning-container').after('<div class="luggage-warning-checkbox-wrapper"><div class="luggage-warning-checkbox"><input id="luggage-warning-checkbox" type="checkbox"><label for="luggage-warning-checkbox">'+textData['Мне не нужен регистрируемый багаж']+'</label></div></div>')
+                $('.luggage-warning-checkbox').click(function () {
+                    window.dataLayerUamaster = window.dataLayerUamaster || [];
+                    dataLayerUamaster.push({
+                        'event': 'autoEvent',
+                        'eventCategory': 'Exp - Upsell Baggage',
+                        'eventAction': 'click',
+                        'eventLabel': 'I dont want a checked-in baggage',
+                        'eventValue': '',
+                        'eventNonInteraction': 0
+                    });
+                });
                 // $('.ancillary-catalog--go-to-payment button').click(function (e) {
                 //     if($('.ancillary-bag-container .ancillary-counter-count').text() === '00') {
                 //         if($('.insurance-terms-agreement input').is(':checked')) {
