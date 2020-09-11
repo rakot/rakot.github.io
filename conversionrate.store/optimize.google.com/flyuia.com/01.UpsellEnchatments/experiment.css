@@ -26,6 +26,11 @@ app-ancillary-insurance .ancillary-service--header-description {display: flex; j
 app-ancillary-insurance .ancillary-service--header-description .already-has-insurance-button {font-style: normal; cursor: pointer; font-weight: bold; font-size: 12px; line-height: 16px; color: #fff; padding: 8px 10px 5px 30px; background: #006CB7 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAANklEQVR42mNgYPgf8L8eB4xnYGD4n/AfH/Bn+F+PV0H94FGwgWIFg96b/ngVQOMTV3T7MzAAABYk2D1TGzLBAAAAAElFTkSuQmCC) left 8px center no-repeat; border-radius: 3px;}
 app-ancillary-insurance .ancillary-service--header-description .already-has-insurance-button.active {background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAaUlEQVR42o2RSxGAMAwFVwqOigOQgINKQEKkIAUJSHgcYEpbSIbklt2Z/ACNyk5OgGZFkVAOhewLWywYaPEFAw3aa+H4xEWwUmjxI5Rii6sWF1g73Axp8MLdFvbC4aH+CykU7n96705wAmkmtgpSDLC0AAAAAElFTkSuQmCC);}
 
+.luggage-warning-checkbox-wrapper {margin: 10px 0; text-align: center;}
+.luggage-warning-checkbox-wrapper .luggage-warning-checkbox {display: inline-block; background: #80B6DB; padding: 5px 7px 7px; border-radius: 3px; font-size: 12px; color: #FFFFFF; font-weight: bold;}
+.luggage-warning-checkbox-wrapper .luggage-warning-checkbox input {position: relative; top: 3px; width: 15px; height: 15px;}
+.luggage-warning-checkbox-wrapper .luggage-warning-checkbox label {margin-left: 5px; cursor: pointer;}
+
 
 app-ancillary-insurance-card .ancillary-insurance-card-container > .mb-5 {display: none !important;}
 
