@@ -224,7 +224,7 @@ el.addEventListener('load', function() {
                 });
             }
 
-            $('body').append($('<div class="ancillary-seatmap-description-about-seat"></div>').html('<div class="ancillary-seatmap-description-about-seat-bird-wrapper"><div class="ancillary-seatmap-description-about-seat-bird"></div></div><div class="ancillary-seatmap-description-price">&nbsp;</div>'+text).css({
+            $('app-ancillary-catalog').append($('<div class="ancillary-seatmap-description-about-seat"></div>').html('<div class="ancillary-seatmap-description-about-seat-bird-wrapper"><div class="ancillary-seatmap-description-about-seat-bird"></div></div><div class="ancillary-seatmap-description-price">&nbsp;</div>'+text).css({
                 left: self.offset().left+self.width()+10+'px',
                 top: self.offset().top-50+'px'
             }));
