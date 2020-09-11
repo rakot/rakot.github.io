@@ -31,9 +31,9 @@ el.addEventListener('load', function() {
 
     if($('.control-item.change-language .label').text() === 'English') {
         textData = {
-            'Добавьте багаж с 50% скидкой!':'Добавьте багаж с 50% скидкой!',
-            'На стойке регистрации стоимость будет в 2 раза больше!':'На стойке регистрации стоимость будет в 2 раза больше!',
-            'Включено:':'Включено:',
+            'Добавьте багаж с 50% скидкой!':'Add luggage with 50% discount',
+            'На стойке регистрации стоимость будет в 2 раза больше!':'The price for additioal luggage at registration desk will be 100% higher.',
+            'Включено:':'Included:',
 
             'У меня уже есть страховка':'I have insurance',
             'Медицинские расходы':'Medical expenses',
