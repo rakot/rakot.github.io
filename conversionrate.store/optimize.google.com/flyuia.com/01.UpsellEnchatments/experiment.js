@@ -6,6 +6,16 @@ el.addEventListener('load', function() {
     jQuery.noConflict();
     let $ = jQuery;
 
+    window.dataLayerUamaster = window.dataLayerUamaster || [];
+    dataLayerUamaster.push({
+        'event': 'autoEvent',
+        'eventCategory': 'Exp - Upsell Baggage',
+        'eventAction': 'activated',
+        'eventLabel': '',
+        'eventValue': '',
+        'eventNonInteraction': 1
+    });
+
     let textData = {
         'Добавьте багаж с 50% скидкой!':'Добавьте багаж с 50% скидкой!',
         'На стойке регистрации стоимость будет в 2 раза больше!':'На стойке регистрации стоимость будет в 2 раза больше!',
@@ -128,6 +138,16 @@ el.addEventListener('load', function() {
             $('.ancillary-seatmap-description-about-seat').remove();
             if(text === '') {
                 text += '<p>'+textData['Сидите вместе. Выбирайте удобные места рядом с близкими.']+'</p>';
+
+                window.dataLayerUamaster = window.dataLayerUamaster || [];
+                dataLayerUamaster.push({
+                    'event': 'autoEvent',
+                    'eventCategory': 'Exp - Upsell Baggage',
+                    'eventAction': 'mouse over',
+                    'eventLabel': 'regular seat',
+                    'eventValue': '',
+                    'eventNonInteraction': 1
+                });
             }
 
             $('body').append($('<div class="ancillary-seatmap-description-about-seat"></div>').html('<div class="ancillary-seatmap-description-about-seat-bird-wrapper"><div class="ancillary-seatmap-description-about-seat-bird"></div></div><div class="ancillary-seatmap-description-price">&nbsp;</div>'+text).css({
@@ -146,6 +166,49 @@ el.addEventListener('load', function() {
             }, 10);
         }, function () {
             $('.ancillary-seatmap-description-about-seat').remove();
+        }).click(function () {
+            let self = $(this);
+
+            let row = parseInt(self.parent().find('.aisle').first().text());
+            let text = '';
+            if(self.prevAll().length === 0 || self.nextAll().length === 0) {
+                text += '+';
+            }
+            if(self.next().hasClass('aisle') || self.prev().hasClass('aisle')) {
+                text += '+';
+            }
+            if(self.parent().prev().hasClass('row-emergency-exit')) {
+                text += '+';
+            }
+            if(row < 11) {
+                text += '+';
+            }
+
+            if(text === '') {
+                if(self.hasClass('selected')) {
+                    window.dataLayerUamaster = window.dataLayerUamaster || [];
+                    dataLayerUamaster.push({
+                        'event': 'autoEvent',
+                        'eventCategory': 'Exp - Upsell Baggage',
+                        'eventAction': 'mouse over',
+                        'eventLabel': 'aisle seat',
+                        'eventValue': '',
+                        'eventNonInteraction': 1
+                    });
+                    console.log('Common unselect');
+                } else {
+                    window.dataLayerUamaster = window.dataLayerUamaster || [];
+                    dataLayerUamaster.push({
+                        'event': 'autoEvent',
+                        'eventCategory': 'Exp - Upsell Baggage',
+                        'eventAction': 'select',
+                        'eventLabel': 'regular seat',
+                        'eventValue': '',
+                        'eventNonInteraction': 0
+                    });
+                    console.log('Common select');
+                }
+            }
         });
     }, 100);
 });
