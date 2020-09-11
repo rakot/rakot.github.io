@@ -124,15 +124,51 @@ el.addEventListener('load', function() {
             let row = parseInt(self.parent().find('.aisle').first().text());
             let text = '';
             if(self.prevAll().length === 0 || self.nextAll().length === 0) {
+                window.dataLayerUamaster = window.dataLayerUamaster || [];
+                dataLayerUamaster.push({
+                    'event': 'autoEvent',
+                    'eventCategory': 'Exp - Upsell Baggage',
+                    'eventAction': 'mouse over',
+                    'eventLabel': 'window seat',
+                    'eventValue': '',
+                    'eventNonInteraction': 1
+                });
                 text += '<p>'+textData['Место с доступом к окну']+' <span>'+textData['(Вид на панораму из окна)']+'</span></p>'
             }
             if(self.next().hasClass('aisle') || self.prev().hasClass('aisle')) {
+                window.dataLayerUamaster = window.dataLayerUamaster || [];
+                dataLayerUamaster.push({
+                    'event': 'autoEvent',
+                    'eventCategory': 'Exp - Upsell Baggage',
+                    'eventAction': 'mouse over',
+                    'eventLabel': 'aisle seat',
+                    'eventValue': '',
+                    'eventNonInteraction': 1
+                });
                 text += '<p>'+textData['Место с доступом к проходу']+' <span>'+textData['(Быстрый доступ к центральному проходу)']+'</span></p>';
             }
             if(self.parent().prev().hasClass('row-emergency-exit')) {
+                window.dataLayerUamaster = window.dataLayerUamaster || [];
+                dataLayerUamaster.push({
+                    'event': 'autoEvent',
+                    'eventCategory': 'Exp - Upsell Baggage',
+                    'eventAction': 'mouse over',
+                    'eventLabel': 'emergency exit seat',
+                    'eventValue': '',
+                    'eventNonInteraction': 1
+                });
                 text += '<p>'+textData['Больше места для ног']+' <span>'+textData['(Вы получаете +70 см пространства для ног)']+'</span></p>';
             }
             if(row < 11) {
+                window.dataLayerUamaster = window.dataLayerUamaster || [];
+                dataLayerUamaster.push({
+                    'event': 'autoEvent',
+                    'eventCategory': 'Exp - Upsell Baggage',
+                    'eventAction': 'mouse over',
+                    'eventLabel': 'front seat',
+                    'eventValue': '',
+                    'eventNonInteraction': 1
+                });
                 text += '<p>'+textData['Место в передней части самолета']+' <span>'+textData['(Более быстрая посадка и выход)']+'</span></p>';
             }
             $('.ancillary-seatmap-description-about-seat').remove();
@@ -172,15 +208,99 @@ el.addEventListener('load', function() {
             let row = parseInt(self.parent().find('.aisle').first().text());
             let text = '';
             if(self.prevAll().length === 0 || self.nextAll().length === 0) {
+                if(self.hasClass('selected')) {
+                    window.dataLayerUamaster = window.dataLayerUamaster || [];
+                    dataLayerUamaster.push({
+                        'event': 'autoEvent',
+                        'eventCategory': 'Exp - Upsell Baggage',
+                        'eventAction': 'delete',
+                        'eventLabel': 'window seat',
+                        'eventValue': '',
+                        'eventNonInteraction': 0
+                    });
+                } else {
+                    window.dataLayerUamaster = window.dataLayerUamaster || [];
+                    dataLayerUamaster.push({
+                        'event': 'autoEvent',
+                        'eventCategory': 'Exp - Upsell Baggage',
+                        'eventAction': 'select',
+                        'eventLabel': 'window seat',
+                        'eventValue': '',
+                        'eventNonInteraction': 0
+                    });
+                }
                 text += '+';
             }
             if(self.next().hasClass('aisle') || self.prev().hasClass('aisle')) {
+                if(self.hasClass('selected')) {
+                    window.dataLayerUamaster = window.dataLayerUamaster || [];
+                    dataLayerUamaster.push({
+                        'event': 'autoEvent',
+                        'eventCategory': 'Exp - Upsell Baggage',
+                        'eventAction': 'delete',
+                        'eventLabel': 'aisle seat',
+                        'eventValue': '',
+                        'eventNonInteraction': 0
+                    });
+                } else {
+                    window.dataLayerUamaster = window.dataLayerUamaster || [];
+                    dataLayerUamaster.push({
+                        'event': 'autoEvent',
+                        'eventCategory': 'Exp - Upsell Baggage',
+                        'eventAction': 'select',
+                        'eventLabel': 'aisle seat',
+                        'eventValue': '',
+                        'eventNonInteraction': 0
+                    });
+                }
                 text += '+';
             }
             if(self.parent().prev().hasClass('row-emergency-exit')) {
+                if(self.hasClass('selected')) {
+                    window.dataLayerUamaster = window.dataLayerUamaster || [];
+                    dataLayerUamaster.push({
+                        'event': 'autoEvent',
+                        'eventCategory': 'Exp - Upsell Baggage',
+                        'eventAction': 'delete',
+                        'eventLabel': 'emergency exit seat',
+                        'eventValue': '',
+                        'eventNonInteraction': 0
+                    });
+                } else {
+                    window.dataLayerUamaster = window.dataLayerUamaster || [];
+                    dataLayerUamaster.push({
+                        'event': 'autoEvent',
+                        'eventCategory': 'Exp - Upsell Baggage',
+                        'eventAction': 'select',
+                        'eventLabel': 'emergency exit seat',
+                        'eventValue': '',
+                        'eventNonInteraction': 0
+                    });
+                }
                 text += '+';
             }
             if(row < 11) {
+                if(self.hasClass('selected')) {
+                    window.dataLayerUamaster = window.dataLayerUamaster || [];
+                    dataLayerUamaster.push({
+                        'event': 'autoEvent',
+                        'eventCategory': 'Exp - Upsell Baggage',
+                        'eventAction': 'delete',
+                        'eventLabel': 'front seat',
+                        'eventValue': '',
+                        'eventNonInteraction': 0
+                    })
+                } else {
+                    window.dataLayerUamaster = window.dataLayerUamaster || [];
+                    dataLayerUamaster.push({
+                        'event': 'autoEvent',
+                        'eventCategory': 'Exp - Upsell Baggage',
+                        'eventAction': 'select',
+                        'eventLabel': 'front seat',
+                        'eventValue': '',
+                        'eventNonInteraction': 0
+                    });
+                }
                 text += '+';
             }
 
@@ -190,12 +310,11 @@ el.addEventListener('load', function() {
                     dataLayerUamaster.push({
                         'event': 'autoEvent',
                         'eventCategory': 'Exp - Upsell Baggage',
-                        'eventAction': 'mouse over',
-                        'eventLabel': 'aisle seat',
+                        'eventAction': 'delete',
+                        'eventLabel': 'regular seat',
                         'eventValue': '',
-                        'eventNonInteraction': 1
+                        'eventNonInteraction': 0
                     });
-                    console.log('Common unselect');
                 } else {
                     window.dataLayerUamaster = window.dataLayerUamaster || [];
                     dataLayerUamaster.push({
@@ -206,7 +325,6 @@ el.addEventListener('load', function() {
                         'eventValue': '',
                         'eventNonInteraction': 0
                     });
-                    console.log('Common select');
                 }
             }
         });
