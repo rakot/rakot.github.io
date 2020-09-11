@@ -33,4 +33,4 @@ app-ancillary-insurance-card ul {margin: 0; padding: 0; list-style: none;}
 app-ancillary-insurance-card li {padding: 0 0 0 20px; margin: 0 0 15px; color: #000000; font-weight: normal; font-size: 12px; line-height: 16px; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAKCAYAAABv7tTEAAAAP0lEQVR4AWMgEQiQqqEBiO+DNJKi4T8Q11OkQQGESbVhP9StCqQ4SQGkCaYRlwZCGiegayCoEV0DsRrzCSkCADZoFmoUtNLVAAAAAElFTkSuQmCC) left top no-repeat;}
 
 
-.mat-tooltip.mat-tooltip-primary.mat-tooltip-ancillary-seatmap.ng-tns-c100-2.ng-star-inserted {display: none;}
+.mat-tooltip.mat-tooltip-primary.mat-tooltip-ancillary-seatmap.ng-star-inserted {display: none;}
