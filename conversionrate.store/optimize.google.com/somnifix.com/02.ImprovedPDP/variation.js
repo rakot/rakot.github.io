@@ -10,9 +10,43 @@ $(function () {
         '</div>' +
         '</div></div>');
 
-    $('#template-product .swatch--1-pack').next().find('.on-title').before('<div class="on-title-details">28 strips — 28 days</div>')
-    $('#template-product .swatch--3-pack').next().find('.on-title').before('<div class="on-title-details">84 strips — 84 days</div>')
-    $('#template-product .swatch--3-pack-auto-ship').next().find('.on-title').before('<div class="on-title-details">84 strips — 84 days</div>')
+    $('#template-product .swatch--1-pack').next().find('.on-title').before('<div class="on-title-details">28 strips — 28 days</div>');
+    $('#template-product .swatch--3-pack').next().find('.on-title').before('<div class="on-title-details">84 strips — 84 days</div>');
+    $('#template-product .swatch--3-pack-auto-ship').next().find('.on-title').before('<div class="on-title-details">84 strips — 84 days</div>');
+
+    let notify_one_step_away = $('.notify-one-step-away');
+
+    $('#template-product  .purchase-details').hover(function () {
+        notify_one_step_away.removeAttr('style');
+    });
+
+    $('#template-product  .on-payment-wrapper img').hover(function () {
+        let self = $(this).parent();
+        if(self.hasClass('on-item on-item-1')) {
+            notify_one_step_away.css({
+                'margin-left': '-'+Math.round(self.width()/2)+'px',
+                'bottom': (self.height()*2+60).toString()+'px'
+            });
+        }
+        if(self.hasClass('on-item on-item-2')) {
+            notify_one_step_away.css({
+                'margin-left': Math.round(self.width()/2)+'px',
+                'bottom': (self.height()*2+60).toString()+'px'
+            });
+        }
+        if(self.hasClass('on-item on-item-3')) {
+            notify_one_step_away.css({
+                'margin-left': '-'+Math.round(self.width()/2)+'px',
+                'bottom': (self.height()+50).toString()+'px'
+            });
+        }
+        if(self.hasClass('on-item on-item-4')) {
+            notify_one_step_away.css({
+                'margin-left': Math.round(self.width()/2)+'px',
+                'bottom': (self.height()+50).toString()+'px'
+            });
+        }
+    });
 
 });
 

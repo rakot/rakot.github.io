@@ -11,7 +11,7 @@ body .purchase-details .purchase-details__spb--false .button--add-to-cart {backg
 .product_section .swatch label.on-variant-label .on-title-details {font-family: Roboto, sans-serif; text-transform: none; margin-top: 5px; text-align: center; color: #747474; font-style: normal; font-weight: normal; font-size: 12px; line-height: 100%;}
 
 
-.notify-one-step-away {display: none; position: absolute; bottom: 55px; width: 285px; box-sizing: border-box; background: rgba(255, 255, 255, 0.8); box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.2); backdrop-filter: blur(10px); border-radius: 6px; padding: 10px 11px;}
+.notify-one-step-away {display: none; pointer-events: none; position: absolute; bottom: 55px; width: 285px; box-sizing: border-box; background: rgba(255, 255, 255, 0.8); box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.2); backdrop-filter: blur(10px); border-radius: 6px; padding: 10px 11px;}
 .purchase-details__buttons:hover .notify-one-step-away{display: block;}
 .on-payment-wrapper:hover + .purchase-details .notify-one-step-away{display: block;}
 
