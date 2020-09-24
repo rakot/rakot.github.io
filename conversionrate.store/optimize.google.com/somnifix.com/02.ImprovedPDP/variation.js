@@ -15,9 +15,13 @@ $(function () {
     $('#template-product .swatch--3-pack-auto-ship').next().find('.on-title').before('<div class="on-title-details">84 strips — 84 days</div>');
 
     let notify_one_step_away = $('.notify-one-step-away');
+    let form = $('#template-product .purchase-details').parent();
 
     $('#template-product  .purchase-details').hover(function () {
+        form.addClass('notify-one-step-away-visible');
         notify_one_step_away.removeAttr('style');
+    }, function () {
+        form.removeClass('notify-one-step-away-visible');
     });
 
     $('#template-product  .on-payment-wrapper img').hover(function () {
@@ -46,6 +50,9 @@ $(function () {
                 'bottom': (self.height()+50).toString()+'px'
             });
         }
+        form.addClass('notify-one-step-away-visible');
+    }, function () {
+        form.removeClass('notify-one-step-away-visible');
     });
 
 });
