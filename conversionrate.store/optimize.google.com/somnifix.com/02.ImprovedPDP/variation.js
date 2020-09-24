@@ -9,6 +9,11 @@ $(function () {
         '<span class="notify-one-step-away-wrapper-li">99% customer satisfaction rate</span>' +
         '</div>' +
         '</div></div>');
+
+    $('#template-product .swatch--1-pack').next().find('.on-title').before('<div class="on-title-details">28 strips — 28 days</div>')
+    $('#template-product .swatch--3-pack').next().find('.on-title').before('<div class="on-title-details">84 strips — 84 days</div>')
+    $('#template-product .swatch--3-pack-auto-ship').next().find('.on-title').before('<div class="on-title-details">84 strips — 84 days</div>')
+
 });
 
 

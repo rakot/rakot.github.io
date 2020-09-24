@@ -10,6 +10,10 @@ $(function () {
         '</div>' +
         '</div></div>');
 
+    $('#template-product .swatch--1-pack').next().find('.on-title').before('<div class="on-title-details">28 strips — 28 days</div>')
+    $('#template-product .swatch--3-pack').next().find('.on-title').before('<div class="on-title-details">84 strips — 84 days</div>')
+    $('#template-product .swatch--3-pack-auto-ship').next().find('.on-title').before('<div class="on-title-details">84 strips — 84 days</div>')
+
     $('h1:contains("How and why SomniFix works")').parents('.shogun-root').prepend('<div class="recomended-by-medical-professional container">' +
         '<h3>Recommended by Medical Professionals</h3>' +
         '<div class="recomended-by-medical-professional-wrapper">' +
