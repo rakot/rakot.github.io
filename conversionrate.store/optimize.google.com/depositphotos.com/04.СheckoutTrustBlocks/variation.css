@@ -10,13 +10,16 @@ body .order-info_custom .order-info__price-row:last-child .order-info__price-cel
 body .order-info_custom .order-info__price-row:last-child .order-info__price-cell:last-child {padding-top: 0;  font-size: 16px !important; line-height: 22px; }
 body .order-info_custom .order-info__price-full {font-size: 16px;}
 .order-info__item_flexible:last-child {position: absolute; right: 0; top: 15px; width: 40%;}
-.order-info_custom .order-info__item_flexible .order-info__item-text {line-height: 18px;}
+.order-info_custom .order-info__item_flexible .order-info__item-text {line-height: 18px; position: relative; top: -2px;}
+body .order-info__item {margin-bottom: 12px;}
 
 body .order-info {position: static;}
 body .order-info ._process {position: absolute; left: 50px; width: 45%; bottom: 94px;}
 .billing-page__cell:first-child {padding-bottom: 200px;}
 .billing-page__wrap {position: relative;}
 .billing-page__container .billing-settings {position: absolute; width: 45%; left: 50px; bottom: 50px;}
+body .billing-process__label_desktop {display: block; width: 80%; margin-left: auto; margin-right: auto;}
+.promocode_compact .promocode__link {color: #4792DE; font-weight: bold; font-size: 12px;}
 
 
 .checkout-trust-blocks {padding-top: 5px;}
