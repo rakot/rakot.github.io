@@ -321,6 +321,7 @@
  		}
  		.keradan-article-banner-content a{
  		    display: block;
+ 		    text-decoration: none;
  		    background: #E768B5;
             border-radius: 3px;
             padding: 10px 13px;
