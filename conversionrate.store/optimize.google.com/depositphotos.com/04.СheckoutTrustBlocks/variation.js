@@ -96,9 +96,6 @@ Backbone.$(function () {
                 });
             }
 
-            $('.order-info ._process').css('top', ($('.billing-page__cell:first ._errorHolder').last().position().top+10)+'px');
-            $('.billing-page__container .billing-settings').css('top', ($('.billing-page__cell:first ._errorHolder').last().position().top+10+$('.order-info ._process').height())+'px');
-
             $('.billing-page__cell:last').append('<div class="checkout-trust-blocks">' +
                 '<div class="checkout-trust-blocks-1"></div>' +
                 '<div class="checkout-trust-blocks-2"></div>' +
@@ -170,5 +167,9 @@ Backbone.$(function () {
                 });
             });
         }
+
+        $('.order-info ._process').css('top', ($('.billing-page__cell:first ._errorHolder').last().position().top+10)+'px');
+        $('.billing-page__container .billing-settings').css('top', ($('.billing-page__cell:first ._errorHolder').last().position().top+10+$('.order-info ._process').height())+'px');
+
     }, 100);
 });
