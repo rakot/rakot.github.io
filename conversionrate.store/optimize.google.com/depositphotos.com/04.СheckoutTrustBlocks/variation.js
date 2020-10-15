@@ -1,3 +1,4 @@
+Backbone.$('head').append('<style id="experiment-flickering-disable"> .billing-page {visibility: hidden;}</style>');
 Backbone.$(function () {
     var $ = Backbone.$;
     var startHotjar = true;
@@ -166,6 +167,9 @@ Backbone.$(function () {
                     'eventValue': ' '
                 });
             });
+            setTimeout(function () {
+                $('#experiment-flickering-disable').remove();
+            }, 500);
         }
     }, 100);
 });
