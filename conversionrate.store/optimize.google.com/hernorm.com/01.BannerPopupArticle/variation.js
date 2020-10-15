@@ -280,7 +280,7 @@
         .keradan-article-banner {
             width: auto;
             margin: 0 -15px;
-            background: url('https://rakot.github.io/conversionrate.store/optimize.google.com/hernorm.com/01.BannerPopupArticle/bg1.png') center no-repeat;
+            background: url('https://rakot.github.io/conversionrate.store/optimize.google.com/hernorm.com/01.BannerPopupArticle/bg1.png?v=1') center no-repeat;
             background-size: cover;
         }
         
