@@ -116,7 +116,7 @@
  			align-items: center;
  			justify-content: center;
  			background: rgba(0,0,0,0.4);
- 			z-index: 9999999999;
+ 			z-index: 2147483647;
  			opacity: 1;
  			transition: opacity 0.3s ease;
  		}
@@ -248,7 +248,7 @@
             box-shadow: 0px 0px 10px rgba(133, 35, 94, 0.25);
             color: white;
             text-decoration: none;
-            z-index: 9;
+            z-index: 2147483647;
         }
         
         .keradan-sticky-box span.text {
@@ -408,7 +408,6 @@
 <path d="M9.44469 7.37568L2.32449 0.255608C2.15981 0.090796 1.93997 0 1.70557 0C1.47116 0 1.25133 0.090796 1.08664 0.255608L0.562291 0.779831C0.22109 1.12142 0.22109 1.6766 0.562291 2.01767L6.5413 7.99668L0.555657 13.9823C0.390975 14.1471 0.300049 14.3668 0.300049 14.6011C0.300049 14.8357 0.390975 15.0554 0.555657 15.2203L1.08001 15.7444C1.24482 15.9092 1.46453 16 1.69893 16C1.93334 16 2.15317 15.9092 2.31785 15.7444L9.44469 8.61782C9.60976 8.45248 9.70043 8.23174 9.69991 7.99707C9.70043 7.7615 9.60976 7.54088 9.44469 7.37568Z" fill="white"/>
 </svg>
 </span>`;
-    console.log(sticky_box_content);
     let sticky_box = $('<a class="keradan-sticky-box"></a>');
     sticky_box.html(sticky_box_content);
     sticky_box.click(function () {
@@ -423,17 +422,43 @@
         return false;
     });
 
-    if($('.inside-article h3:eq(1)').length) {
-        $('.inside-article h3:eq(1)').before(`<div class="keradan-article-banner">
+    let show_banner = function () {
+        let keradan_doInit = window.doInit.toString();
+        keradan_doInit = window.doInit.toString().replace("jQuery('a[data-tracking-group]').each", "jQuery('.krdn-affiliate-link').each")
+            .replace("jQuery('a[data-tracking-group]').click", "jQuery('.krdn-affiliate-link').click")
+            .replace("jQuery('a[data-tracking-group]').mousedown", "jQuery('.krdn-affiliate-link').mousedown");
+
+        let parseFunction = function(str) {
+            var fn_body_idx = str.indexOf('{'),
+                fn_body = str.substring(fn_body_idx+1, str.lastIndexOf('}')),
+                fn_declare = str.substring(0, fn_body_idx),
+                fn_params = fn_declare.substring(fn_declare.indexOf('(')+1, fn_declare.lastIndexOf(')')),
+                args = fn_params.split(',');
+
+            args.push(fn_body);
+
+            function Fn () {
+                return Function.apply(this, args);
+            }
+            Fn.prototype = Function.prototype;
+
+            return new Fn();
+        };
+
+        if($('.inside-article h3:eq(1)').length) {
+            $('.inside-article h3:eq(1)').before(`<div class="keradan-article-banner">
     <div class="keradan-article-banner-content">
         <h4>Is Your Partner Cheating?</h4>
         <p>Uncover Personal Information, Social Media Data<br><span>Online Activity, Photos, and More!!</span></p>
-        <a href="http://hernorm.com/recommends/bgc">Find out with this tool →</a>
+        <a data-tracking-group="cake" data-action="sale.bgc" href="${markup_content.request_button_link}"  class="request-button krdn-affiliate-link">Find out with this tool →</a>
 </div>
 </div>`);
-    }
+            setTimeout(parseFunction(keradan_doInit)(), 1);
+        }
+    };
+    show_banner();
 
     setTimeout(function () {
-        $('body').prepend(sticky_box);
+        $('body').append(sticky_box);
     }, 10000);
 })();
