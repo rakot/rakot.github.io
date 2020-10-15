@@ -12,7 +12,7 @@ body .order-info_custom .order-info__price-full {font-size: 16px;}
 .order-info__item_flexible:last-child {position: absolute; right: 0; top: 15px; width: 40%;}
 .order-info_custom .order-info__item_flexible .order-info__item-text {line-height: 18px; position: relative; top: -2px;}
 body .order-info__item {margin-bottom: 12px;}
-.order-info__item_re-bill .checkbox-box .icon-checkbox {width: 16px; height: 16px;}
+.order-info__item_re-bill .checkbox-box .icon-checkbox, .order-info__item_flexible .checkbox-box .icon-checkbox {width: 16px; height: 16px;}
 
 body .order-info {position: static;}
 body .order-info ._process {position: absolute; left: 50px; width: 45%; bottom: 94px;}
