@@ -280,7 +280,7 @@
         .keradan-article-banner {
             width: auto;
             margin: 0 -15px;
-            background: url('https://hernorm.com/wp-content/uploads/2020/03/Is-He-Cheating-1024x682.jpg') center no-repeat;
+            background: url('https://rakot.github.io/conversionrate.store/optimize.google.com/hernorm.com/01.BannerPopupArticle/bg1.png') center no-repeat;
             background-size: cover;
         }
         
