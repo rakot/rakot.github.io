@@ -92,7 +92,8 @@
         cancel_button_text: 'I prefer to don’t know about this',
         request_button_text: 'I want to learn more about this tool',
         // request_button_link: 'https://hernorm.com/how-to-find-out-if-hes-cheating/',
-        request_button_link: 'https://www.truthfinder.com/',
+        // request_button_link: 'https://www.truthfinder.com/',
+        request_button_link: 'http://hernorm.com/recommends/bgc'
     };
 
     markup_content.list_items_text.forEach(function(text_item){
@@ -275,7 +276,61 @@
             position: relative;
             left: 1px;
         }
- 		
+        
+        .keradan-article-banner {
+            width: auto;
+            margin: 0 -15px;
+            background: url('https://hernorm.com/wp-content/uploads/2020/03/Is-He-Cheating-1024x682.jpg') center no-repeat;
+            background-size: cover;
+        }
+        
+        .keradan-article-banner-content {
+            color: #fff;
+            padding: 2em 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: rgba(0,0,0,.5);
+            text-align: center;
+            -webkit-font-smoothing: antialiased;
+        }
+ 		.keradan-article-banner-content h4{
+            font-family: PT Serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 32px;
+            text-align: center;
+ 		}
+ 		.keradan-article-banner-content p{
+ 		    font-family: PT Serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 19px;
+            text-align: center;
+ 		}
+ 		.keradan-article-banner-content p span{
+ 		    font-family: PT Serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 21px;
+            text-align: center;
+ 		}
+ 		.keradan-article-banner-content a{
+ 		    display: block;
+ 		    background: #E768B5;
+            border-radius: 3px;
+            padding: 10px 13px;
+            font-family: PT Serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 21px;
+            color: #FFFFFF;
+ 		}
  	`;
 
     let markup = `
@@ -367,6 +422,17 @@
         return false;
     });
 
+    if($('.inside-article h3:eq(1)').length) {
+        $('.inside-article h3:eq(1)').before(`<div class="keradan-article-banner">
+    <div class="keradan-article-banner-content">
+        <h4>Is Your Partner Cheating?</h4>
+        <p>Uncover Personal Information, Social Media Data<br><span>Online Activity, Photos, and More!!</span></p>
+        <a href="http://hernorm.com/recommends/bgc">Find out with this tool →</a>
+</div>
+</div>`);
+    }
 
-    $('body').prepend(sticky_box);
+    setTimeout(function () {
+        $('body').prepend(sticky_box);
+    }, 10000);
 })();
