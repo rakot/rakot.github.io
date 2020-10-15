@@ -280,7 +280,7 @@
         .keradan-article-banner {
             width: auto;
             margin: 0 -15px;
-            background: url('https://rakot.github.io/conversionrate.store/optimize.google.com/hernorm.com/01.BannerPopupArticle/bg1.png?v=1') center no-repeat;
+            background: #000 url('https://rakot.github.io/conversionrate.store/optimize.google.com/hernorm.com/01.BannerPopupArticle/bg1.png?v=1') center no-repeat;
             background-size: cover;
         }
         
@@ -291,7 +291,7 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            background-color: rgba(0,0,0,.5);
+            
             text-align: center;
             -webkit-font-smoothing: antialiased;
         }
