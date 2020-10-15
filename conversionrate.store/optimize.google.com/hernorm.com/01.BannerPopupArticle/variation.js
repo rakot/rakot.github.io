@@ -453,6 +453,15 @@
         <a data-tracking-group="cake" data-action="sale.bgc" href="${markup_content.request_button_link}"  class="request-button krdn-affiliate-link">Find out with this tool →</a>
 </div>
 </div>`);
+            $('.keradan-article-banner a').click(function () {
+                window.dataLayer = window.dataLayer || [];
+                dataLayer.push({
+                    'event': 'event-to-ga',
+                    'eventCategory': 'Exp - Banner & Popup & Article Banner',
+                    'eventAction': 'click on the article banner',
+                    'eventLabel': 'article banner'
+                });
+            });
             setTimeout(parseFunction(keradan_doInit)(), 1);
         }
     };
