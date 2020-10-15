@@ -15,10 +15,10 @@ body .order-info__item {margin-bottom: 12px;}
 .order-info__item_re-bill .checkbox-box .icon-checkbox, .order-info__item_flexible .checkbox-box .icon-checkbox {width: 16px; height: 16px;}
 
 body .order-info {position: static;}
-body .order-info ._process {position: absolute; left: 50px; width: 45%; bottom: 94px;}
-.billing-page__cell:first-child {padding-bottom: 200px;}
+.billing-page__cell:first-child {padding-bottom: 160px;}
 .billing-page__wrap {position: relative;}
-.billing-page__container .billing-settings {position: absolute; width: 45%; left: 50px; bottom: 50px;}
+body .order-info ._process {position: absolute; left: 50px; width: 45%; }
+.billing-page__container .billing-settings {position: absolute; width: 45%; left: 50px;}
 body .billing-process__label_desktop {display: block; width: 80%; margin-left: auto; margin-right: auto;}
 .promocode_compact .promocode__link {color: #4792DE; font-weight: bold; font-size: 12px;}
 
