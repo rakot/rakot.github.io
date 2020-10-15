@@ -168,8 +168,8 @@ Backbone.$(function () {
             });
         }
 
-        $('.order-info ._process').css('top', ($('.billing-page__cell:first ._errorHolder').last().position().top+10)+'px');
-        $('.billing-page__container .billing-settings').css('top', ($('.billing-page__cell:first ._errorHolder').last().position().top+10+$('.order-info ._process').height())+'px');
+        $('.order-info ._process').css('top', ($('.billing-page__cell:first ._errorHolder').last().position().top+30)+'px');
+        $('.billing-page__container .billing-settings').css('top', ($('.billing-page__cell:first ._errorHolder').last().position().top+30+$('.order-info ._process').height())+'px');
 
     }, 100);
 });
