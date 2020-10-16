@@ -1,15 +1,15 @@
-body .order-info_custom {padding: 0; border: none; background: transparent;}
+body .order-info_custom {margin-bottom: 20px;}
 .order-info__price-table .order-info__price-row {display: none;}
-.order-info__price-table .order-info__price-row:last-child {display: table-row;}
+.order-info__price-table .order-info__price-row:last-child {display: block; text-align: left; margin-top: 10px;}
 body .order-info_custom .order-info__sep-box {display: none;}
 
-body .order-info_custom .order-info__details {position: relative; display: flex;}
+body .order-info_custom .order-info__details {position: relative;}
 .order-info_custom .order-info__details .order-info__items {width: 50%; margin-right: 10%;}
 .order-info_custom .order-info__details .order-info__price {width: 40%;}
 body .order-info_custom .order-info__price-row:last-child .order-info__price-cell {padding-top: 0;  font-size: 16px !important; line-height: 22px; }
 body .order-info_custom .order-info__price-row:last-child .order-info__price-cell:last-child {padding-top: 0;  font-size: 16px !important; line-height: 22px; }
 body .order-info_custom .order-info__price-full {font-size: 16px;}
-.order-info__item_flexible:last-child {position: absolute; right: 0; top: 15px; width: 40%;}
+.order-info__item_flexible:last-child {width: 70%;}
 .order-info_custom .order-info__item_flexible .order-info__item-text {line-height: 18px; position: relative; top: -2px;}
 body .order-info__item {margin-bottom: 12px;}
 .order-info__item_re-bill .checkbox-box .icon-checkbox, .order-info__item_flexible .checkbox-box .icon-checkbox {width: 16px; height: 16px;}
