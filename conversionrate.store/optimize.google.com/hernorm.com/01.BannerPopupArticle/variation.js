@@ -39,12 +39,12 @@
         let dataLayer = window.dataLayer || [];
         let ga_data = {
             'event': 'event-to-ga',
-            'eventCategory': 'Popup with CTA - US',
+            'eventCategory': 'Exp - Banner & Popup & Article Banner',
             'eventAction': eventAction
         };
         keradan_log('keradan ga event: ', ga_data);
         if(true) dataLayer.push(ga_data);
-    }
+    };
 
     keradan_ga_event('loaded');
 
@@ -58,7 +58,7 @@
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     window.hj = window.hj || function(){(hj.q = hj.q || []).push(arguments)};
     try {
-        hj('trigger', 'Banner+pop-up+article banner_us');
+        hj('trigger', 'banner_pop-up_article_banner_us');
     }
     catch(e) {}
 
@@ -363,15 +363,33 @@
         close_popup();
     });
     popup_wrapper.querySelector('button.close').addEventListener('click', function(){
-        keradan_ga_event('close popup - X');
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'event': 'event-to-ga',
+            'eventCategory': 'Exp - Banner & Popup & Article Banner',
+            'eventAction': 'click X to close',
+            'eventLabel': 'popup'
+        });
         close_popup();
     });
     popup_wrapper.querySelector('button.cancel-button').addEventListener('click', function(){
-        keradan_ga_event('click on I prefer to do not know about this');
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'event': 'event-to-ga',
+            'eventCategory': 'Exp - Banner & Popup & Article Banner',
+            'eventAction': 'click on I prefer to do not know about this',
+            'eventLabel': 'popup'
+        });
         close_popup();
     });
     popup_wrapper.querySelector('a.request-button').addEventListener('click', function(){
-        keradan_ga_event('click on I want to learn more about this tool');
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'event': 'event-to-ga',
+            'eventCategory': 'Exp - Banner & Popup & Article Banner',
+            'eventAction': 'click on I want to learn more about this tool',
+            'eventLabel': 'popup'
+        });
     });
 
     let showPopup = function () {
@@ -382,6 +400,14 @@
 
         setTimeout(parseFunction(keradan_doInit)(), 1);
         setTimeout(show_popup, 5);
+
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'event': 'event-to-ga',
+            'eventCategory': 'Exp - Banner & Popup & Article Banner',
+            'eventAction': 'popup loaded',
+            'eventLabel': 'popup'
+        });
 
         function parseFunction (str) {
             var fn_body_idx = str.indexOf('{'),
@@ -414,9 +440,9 @@
         window.dataLayer = window.dataLayer || [];
         dataLayer.push({
             'event': 'event-to-ga',
-            'eventCategory': 'Exp - Banners with CTA on articles (only US)',
-            'eventAction': 'click on sticky button',
-            'eventLabel': 'BGC sale'
+            'eventCategory': 'Exp - Banner & Popup & Article Banner',
+            'eventAction': 'click on Is your partner cheating',
+            'eventLabel': 'Sticky banner'
         });
         showPopup();
         return false;
@@ -468,6 +494,13 @@
     show_banner();
 
     setTimeout(function () {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'event': 'event-to-ga',
+            'eventCategory': 'Exp - Banner & Popup & Article Banner',
+            'eventAction': 'sticky banner loaded',
+            'eventLabel': 'Sticky banner'
+        });
         $('body').append(sticky_box);
     }, 10000);
 })();
