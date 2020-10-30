@@ -7,15 +7,15 @@
     body .on-card-dwrapper .product_section .swatch label.on-variant-label .on-icon {position: relative; top: 0; left: 0;}
     body .on-card-dwrapper .swatch label.on-variant-label .on-mb-swatch-item {display: block; padding-left: 8px;}
     body .on-card-dwrapper .swatch label.on-variant-label .on-mb-swatch-item .on-item-icon {position: absolute; left: 15px; top: 18px;}
-    body .on-card-dwrapper .swatch label.on-variant-label .on-mb-swatch-item .on-item-details {width: 100%; position: static; padding-left: 0; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid #E0E0E0;}
+    body .on-card-dwrapper .swatch label.on-variant-label .on-mb-swatch-item .on-item-details {width: 100%; position: static; margin-bottom: 10px; padding: 0 0 8px; border-bottom: 1px solid #E0E0E0;}
 
     body .on-card-dwrapper .swatch label.on-variant-label .on-mb-swatch-item .on-pack {display: none;}
     body .on-card-dwrapper .swatch label.on-variant-label .on-mb-swatch-item.on-mb-swatch-item-2 .on-item-details .on-top-icon {left: unset; right: 14px; top: 21px;}
     body .on-card-dwrapper .swatch label.on-variant-label .on-mb-swatch-item.on-mb-swatch-item-2 .on-item-details .on-save-icon {right: 14px; top: unset; bottom: 15px;}
-    body .on-card-dwrapper .swatch label.on-variant-label .on-mb-swatch-item .on-item-details .on-top-icon {right: 14px; top: 21px;}
-    body .on-card-dwrapper .swatch label.on-variant-label .on-mb-swatch-item .on-item-details .on-save-icon {right: 14px; bottom: 15px;}
+    body .on-card-dwrapper .swatch label.on-variant-label .on-mb-swatch-item.on-mb-swatch-item-3 .on-item-details .on-top-icon {right: 14px; top: 21px;}
+    body .on-card-dwrapper .swatch label.on-variant-label .on-mb-swatch-item.on-mb-swatch-item-3 .on-item-details .on-save-icon {right: 14px; bottom: 15px;}
     .on-card-dwrapper .swatch .on-gray-amount {font-size: 12px; line-height: 100%; margin-bottom: 5px; color: #747474; font-family: Roboto;}
-    body .on-card-dwrapper .swatch label.on-variant-label .on-mb-swatch-item .on-item-price {width: auto; text-align: left;}
+    body .on-card-dwrapper .swatch label.on-variant-label .on-mb-swatch-item .on-item-price {width: auto; padding: 0; text-align: left;}
     body .on-pack-wrapper .on-select {border-radius: 5px;}
 
     .on-card-dwrapper .swatch label.on-variant-label .on-mb-swatch-item .on-number-of-weeks {text-transform: none; margin-left: 5px; font-style: normal; font-weight: normal; font-size: 10px; line-height: 12px; letter-spacing: 0.025em; color: #1E415F;}
