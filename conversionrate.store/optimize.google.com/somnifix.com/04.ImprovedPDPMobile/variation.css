@@ -12,8 +12,8 @@
     body .on-card-dwrapper .swatch label.on-variant-label .on-mb-swatch-item .on-pack {display: none;}
     body .on-card-dwrapper .swatch label.on-variant-label .on-mb-swatch-item.on-mb-swatch-item-2 .on-item-details .on-top-icon {left: unset; right: 14px; top: 21px;}
     body .on-card-dwrapper .swatch label.on-variant-label .on-mb-swatch-item.on-mb-swatch-item-2 .on-item-details .on-save-icon {right: 14px; top: unset; bottom: 15px;}
-    body .on-card-dwrapper .swatch label.on-variant-label .on-mb-swatch-item.on-mb-swatch-item-3 .on-item-details .on-top-icon {right: 14px; top: 21px;}
-    body .on-card-dwrapper .swatch label.on-variant-label .on-mb-swatch-item.on-mb-swatch-item-3 .on-item-details .on-save-icon {right: 14px; bottom: 15px;}
+    body .on-card-dwrapper .swatch label.on-variant-label .on-mb-swatch-item.on-mb-swatch-item-3 .on-item-details .on-top-icon {right: 14px; left: unset; top: 21px;}
+    body .on-card-dwrapper .swatch label.on-variant-label .on-mb-swatch-item.on-mb-swatch-item-3 .on-item-details .on-save-icon {right: 14px; top: unset; bottom: 15px;}
     .on-card-dwrapper .swatch .on-gray-amount {font-size: 12px; line-height: 100%; margin-bottom: 5px; color: #747474; font-family: Roboto;}
     body .on-card-dwrapper .swatch label.on-variant-label .on-mb-swatch-item .on-item-price {width: auto; padding: 0; text-align: left;}
     body .on-pack-wrapper .on-select {border-radius: 5px;}
