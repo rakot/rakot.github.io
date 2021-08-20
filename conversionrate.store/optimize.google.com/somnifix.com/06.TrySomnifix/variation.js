@@ -1,4 +1,23 @@
 $(function () {
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+        'event': 'event-to-ga',
+        'eventCategory': 'Exp — Free trial 14 days mobile',
+        'eventAction': 'loaded'
+    });
+
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1271698,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    window.hj=window.hj||function(){(hj.q=hj.q||[]).push(arguments)};
+    hj('trigger', 'free_trial_14_days_mobile');
+
+
     let try_for_free_block = $('<div class="shg-box-content content_padd"><div class="try-for-free">' +
         '<div class="try-for-free-wrapper">' +
         '<h3>Try Somnifix for free</h3>' +
@@ -43,7 +62,7 @@ $(function () {
         '<div class="free-trial-cart-total-price">$0</div>' +
         '</div>' +
         '<div class="free-trial-cart-footer">' +
-        '<div class="free-trial-cart-footer-link"><a href="#">How do I cancel?</a></div>' +
+
         '<div class="free-trial-cart-footer-button"><div>Try for free</div></div>' +
         '</div>' +
         '</div>' +
@@ -64,6 +83,14 @@ $(function () {
     let labelPay = paydate.getDate() + ' ' + monMap[paydate.getMonth()];
 
     try_for_free_popup.find('.free-trial-cart-footer-button').click(function () {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'event': 'event-to-ga',
+            'eventCategory': 'Exp — Free trial 14 days mobile',
+            'eventAction': 'Click on Try for free button',
+            'eventLabel': 'Popup'
+        });
+
         addItemToCartFreeTrial(39424489521267, 1, "3", "Months");
     });
     try_for_free_popup.find('.order-progress-line-start span').text(labelToday);
@@ -72,10 +99,36 @@ $(function () {
         try_for_free_popup.hide();
     });
     try_for_free_block.find('.try-for-free-button').click(function () {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'event': 'event-to-ga',
+            'eventCategory': 'Exp — Free trial 14 days mobile',
+            'eventAction': 'Click on Try for free button'
+        });
+
         try_for_free_popup.show();
     });
 
+    try_for_free_popup.find('.try-for-free-popup .free-trial-info a').click(function(){
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'event': 'event-to-ga',
+            'eventCategory': 'Exp — Free trial 14 days mobile',
+            'eventAction': 'Click on Account Link',
+            'eventLabel': 'Popup'
+        });
+    });
+
     let selectData = try_for_free_popup.find('.on-select');
+    selectData.click(function () {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'event': 'event-to-ga',
+            'eventCategory': 'Exp — Free trial 14 days mobile',
+            'eventAction': 'Click on Ship to selection',
+            'eventLabel': 'Popup'
+        });
+    });
     let changeShippingPriceAndDate = function() {
         let selected = selectData.find('option:selected');
         let shipDate = selected.data('value').split(' - ')[0];

@@ -50,7 +50,7 @@
 .try-for-free-popup .free-trial-summary .free-trial-cart-total {display: flex; padding: 18px 0; border-top: 1px solid #dedede; border-bottom: 1px solid #dedede; margin-bottom: 10px;}
 .try-for-free-popup .free-trial-summary .free-trial-cart-total .free-trial-cart-total-title {flex-grow: 1; font-size: 13px; line-height: 22px; color: #3B3B3B;}
 .try-for-free-popup .free-trial-summary .free-trial-cart-total .free-trial-cart-total-price {width: 50px; font-weight: 500; font-size: 15px; line-height: 22px; color: #000000;}
-.try-for-free-popup .free-trial-summary .free-trial-cart-footer {display: flex;}
+.try-for-free-popup .free-trial-summary .free-trial-cart-footer {display: flex; justify-content: center;}
 .try-for-free-popup .free-trial-summary .free-trial-cart-footer .free-trial-cart-footer-link {flex-grow: 1; height: 36px;}
 .try-for-free-popup .free-trial-summary .free-trial-cart-footer .free-trial-cart-footer-link a {font-size: 14px; line-height: 36px; text-transform: capitalize; color: #11415F; text-decoration: underline;}
 .try-for-free-popup .free-trial-summary .free-trial-cart-footer .free-trial-cart-footer-button {width: 240px;}
@@ -85,7 +85,7 @@
 }
 
 @media (max-width: 992px) {
-    .try-for-free-popup {padding: 30px 20px 130px;}
+    .try-for-free-popup {padding: 30px 20px 110px;}
     .try-for-free-popup .shipping-line {flex-wrap: wrap;}
     .try-for-free-popup .shipping-line .shipping-line-select {width: 100%; margin-bottom: 10px; text-align: center;}
     .try-for-free-popup .shipping-line .shipping-line-warning {width: 100%; background: #fff;}
