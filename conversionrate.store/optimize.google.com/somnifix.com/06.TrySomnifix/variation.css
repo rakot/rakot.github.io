@@ -28,9 +28,9 @@
 .try-for-free-popup .order-progress-line-finish {width: 40%;}
 .try-for-free-popup .order-progress-line-finish .date-line {display: flex;}
 .try-for-free-popup .order-progress-line-finish .date-line b {width: 100%; border-radius: 3px; height: 6px; background: #11415F;}
-.try-for-free-popup .order-progress-line-finish .order-progress-line p {color: #11415F;}
 .try-for-free-popup .order-progress-line p {font-size: 18px; line-height: 21px; color: #4DA2BE; margin-bottom: 14px;}
 .try-for-free-popup .order-progress-line span {font-size: 14px; line-height: 16px; color: #414B56; display: block; margin-bottom: 7px;}
+.try-for-free-popup .order-progress-line .order-progress-line-finish p {color: #11415F;}
 
 .try-for-free-popup .free-trial-two-cols {display: flex;  margin-bottom: 20px;}
 .try-for-free-popup .free-trial-three-steps {width: 60%; padding-right: 50px;}
