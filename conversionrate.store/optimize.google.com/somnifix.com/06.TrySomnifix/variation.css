@@ -101,6 +101,7 @@
     .try-for-free-popup .free-trial-summary .free-trial-cart-footer .free-trial-cart-footer-button {width: 100%;}
     .try-for-free-popup .free-trial-summary .free-trial-cart-footer .free-trial-cart-footer-button div {width: 100%; height: 60px; line-height: 60px; font-size: 24px;}
     .try-for-free-popup .order-progress-line p {height: 21px; font-size: 15px; line-height: 18px;}
+    .try-for-free-popup .free-trial-summary h5 {text-align: center;}
 
     .try-for-free-popup .order-progress-line-middle .date-line b {width: 4px;}
     .try-for-free-popup .order-progress-line-middle .date-line b:first-child {width: 18px; flex-grow: 1; flex-shrink: 0;}
