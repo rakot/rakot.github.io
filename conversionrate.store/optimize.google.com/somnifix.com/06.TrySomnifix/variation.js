@@ -110,6 +110,7 @@ $(function () {
     });
 
     try_for_free_popup.find('.try-for-free-popup .free-trial-info a').click(function(){
+        console.log('Click on Account Link');
         window.dataLayer = window.dataLayer || [];
         dataLayer.push({
             'event': 'event-to-ga',
@@ -121,6 +122,7 @@ $(function () {
 
     let selectData = try_for_free_popup.find('.on-select');
     selectData.click(function () {
+        console.log('Click on Ship to selection');
         window.dataLayer = window.dataLayer || [];
         dataLayer.push({
             'event': 'event-to-ga',
