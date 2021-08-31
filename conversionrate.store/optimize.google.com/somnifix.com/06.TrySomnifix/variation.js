@@ -63,7 +63,7 @@ $(function () {
         '</div>' +
         '<div class="free-trial-cart-footer">' +
 
-        '<div class="free-trial-cart-footer-button"><div>Try for free</div></div>' +
+        '<div class="free-trial-cart-footer-button"><div>Sign up for a free trial</div></div>' +
         '</div>' +
         '</div>' +
         '</div>' +

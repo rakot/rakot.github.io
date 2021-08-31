@@ -54,7 +54,7 @@
 .try-for-free-popup .free-trial-summary .free-trial-cart-footer .free-trial-cart-footer-link {flex-grow: 1; height: 36px;}
 .try-for-free-popup .free-trial-summary .free-trial-cart-footer .free-trial-cart-footer-link a {font-size: 14px; line-height: 36px; text-transform: capitalize; color: #11415F; text-decoration: underline;}
 .try-for-free-popup .free-trial-summary .free-trial-cart-footer .free-trial-cart-footer-button {width: 240px;}
-.try-for-free-popup .free-trial-summary .free-trial-cart-footer .free-trial-cart-footer-button div {background: #11415F; cursor: pointer; text-align: center; border-radius: 100px; width: 240px; height: 36px; font-size: 18px; color: #fff; text-transform: uppercase; line-height: 36px;}
+.try-for-free-popup .free-trial-summary .free-trial-cart-footer .free-trial-cart-footer-button div {background: #11415F; cursor: pointer; text-align: center; border-radius: 100px; width: 240px; height: 36px; font-size: 16px; color: #fff; text-transform: uppercase; line-height: 36px;}
 .try-for-free-popup .free-trial-info {font-size: 12px; line-height: 14px; color: #AEAEAE;}
 
 
@@ -99,7 +99,7 @@
     .try-for-free-popup .free-trial-summary .free-trial-cart-footer {flex-wrap: wrap; position: fixed; bottom: 0; width: 100%; left: 0; padding: 0 20px 20px; background: #fff; border-radius: 20px;}
     .try-for-free-popup .free-trial-summary .free-trial-cart-footer .free-trial-cart-footer-link {width: 100%; text-align: center;}
     .try-for-free-popup .free-trial-summary .free-trial-cart-footer .free-trial-cart-footer-button {width: 100%;}
-    .try-for-free-popup .free-trial-summary .free-trial-cart-footer .free-trial-cart-footer-button div {width: 100%; height: 60px; line-height: 60px; font-size: 24px;}
+    .try-for-free-popup .free-trial-summary .free-trial-cart-footer .free-trial-cart-footer-button div {width: 100%; height: 60px; line-height: 60px; font-size: 20px;}
     .try-for-free-popup .order-progress-line p {height: 21px; font-size: 15px; line-height: 18px;}
     .try-for-free-popup .free-trial-summary h5 {text-align: center;}
 
